@@ -1,9 +1,12 @@
 {
   "name": "cleitondcarmo",
+  "homepage": "https://cleitondcarmo.github.io/cleitondcarmo",
   "version": "0.0.0",
   "private": true,
   "scripts": {
     "dev": "vite",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build",
     "build": "run-p type-check build-only",
     "preview": "vite preview",
     "build-only": "vite build",
@@ -12,7 +15,7 @@
   },
   "dependencies": {
     "bootstrap": "^5.2.3",
-    "bootstrap-vue": "^2.23.1",
+    "gh-pages": "^4.0.0",
     "vue": "^3.2.45",
     "vue-router": "^4.1.6"
   },
