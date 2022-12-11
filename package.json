@@ -14,6 +14,7 @@
     "lint": "eslint . --ext .vue,.js,.jsx,.cjs,.mjs,.ts,.tsx,.cts,.mts --fix --ignore-path .gitignore"
   },
   "dependencies": {
+    "@coreui/vue": "^4.5.0",
     "bootstrap": "^5.2.3",
     "gh-pages": "^4.0.0",
     "vue": "^3.2.45",

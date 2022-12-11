@@ -262,6 +262,18 @@
     "@babel/helper-validator-identifier" "^7.19.1"
     "to-fast-properties" "^2.0.0"
 
+"@coreui/coreui@^4.2.2":
+  "integrity" "sha512-ENXa+SJab0Wv4TggVmY2umrWKEapWaCYPDwfdxGWd9SywsJX16R35lejpeSaHSZpgTZq+8WlFu/AyOhI1M/d9A=="
+  "resolved" "https://registry.npmjs.org/@coreui/coreui/-/coreui-4.2.4.tgz"
+  "version" "4.2.4"
+  dependencies:
+    "postcss-combine-duplicated-selectors" "^10.0.3"
+
+"@coreui/vue@^4.5.0":
+  "integrity" "sha512-D6vv04fJne1zIs4HAyDnsAbKWACvWm+a3N1dfpvUZ8hvi7MrjC4+WqOjVa3xcCFLHU5YkN5XIcZyw0lGmII6vw=="
+  "resolved" "https://registry.npmjs.org/@coreui/vue/-/vue-4.5.0.tgz"
+  "version" "4.5.0"
+
 "@eslint/eslintrc@^1.3.3":
   "integrity" "sha512-uj3pT6Mg+3t39fvLrj8iuCIJ38zKO9FpGtJ4BBJebJhEwjoT+KLVNCcHT5QC9NGRIEi7fZ0ZR8YRb884auB4Lg=="
   "resolved" "https://registry.npmjs.org/@eslint/eslintrc/-/eslintrc-1.3.3.tgz"
@@ -2030,7 +2042,14 @@
   dependencies:
     "find-up" "^4.0.0"
 
-"postcss-selector-parser@^6.0.9":
+"postcss-combine-duplicated-selectors@^10.0.3":
+  "integrity" "sha512-IP0BmwFloCskv7DV7xqvzDXqMHpwdczJa6ZvIW8abgHdcIHs9mCJX2ltFhu3EwA51ozp13DByng30+Ke+eIExA=="
+  "resolved" "https://registry.npmjs.org/postcss-combine-duplicated-selectors/-/postcss-combine-duplicated-selectors-10.0.3.tgz"
+  "version" "10.0.3"
+  dependencies:
+    "postcss-selector-parser" "^6.0.4"
+
+"postcss-selector-parser@^6.0.4", "postcss-selector-parser@^6.0.9":
   "integrity" "sha512-zbARubNdogI9j7WY4nQJBiNqQf3sLS3wCP4WfOidu+p28LofJqDH1tcXypGrcmMHhDk2t9wGhCsYe/+szLTy1g=="
   "resolved" "https://registry.npmjs.org/postcss-selector-parser/-/postcss-selector-parser-6.0.11.tgz"
   "version" "6.0.11"
@@ -2038,7 +2057,7 @@
     "cssesc" "^3.0.0"
     "util-deprecate" "^1.0.2"
 
-"postcss@^8.1.10", "postcss@^8.4.18":
+"postcss@^8.1.0", "postcss@^8.1.10", "postcss@^8.4.18":
   "integrity" "sha512-h+pbPsyhlYj6N2ozBmHhHrs9DzGmbaarbLvWipMRO7RLS+v4onj26MPFXA5OBYFxyqYhUJK456SwDcY9H2/zsA=="
   "resolved" "https://registry.npmjs.org/postcss/-/postcss-8.4.19.tgz"
   "version" "8.4.19"
@@ -2485,7 +2504,7 @@
     "@volar/vue-language-core" "1.0.11"
     "@volar/vue-typescript" "1.0.11"
 
-"vue@^3.0.0", "vue@^3.2.0", "vue@^3.2.25", "vue@^3.2.45", "vue@3.2.45":
+"vue@^3.0.0", "vue@^3.2.0", "vue@^3.2.21", "vue@^3.2.25", "vue@^3.2.45", "vue@3.2.45":
   "integrity" "sha512-9Nx/Mg2b2xWlXykmCwiTUCWHbWIj53bnkizBxKai1g61f2Xit700A1ljowpTIM11e3uipOeiPcSqnmBg6gyiaA=="
   "resolved" "https://registry.npmjs.org/vue/-/vue-3.2.45.tgz"
   "version" "3.2.45"
