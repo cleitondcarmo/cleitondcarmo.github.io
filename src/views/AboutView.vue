@@ -37,7 +37,16 @@ import 'bootstrap/dist/css/bootstrap.css'
           </div>
         </div>
         <button type="button" class="btn btn-danger buttonPDF">
-          <a class="download" href="public/curriculo.pdf" download="Currículo - Cleiton Do Carmo"><i class="bi bi-download"></i> Baixar currículo</a>
+          <a class="download" href="public/curriculo.pdf" Content-Disposition download="Currículo - Cleiton Do Carmo"><i class="bi bi-download"></i> Baixar currículo</a>
+        </button>
+        <button type="button" class="btn btn-danger buttonPDF">
+          <a class="download" href="../../public/curriculo.pdf" Content-Disposition download="2 Currículo - Cleiton Do Carmo"><i class="bi bi-download"></i> Baixar currículo 2</a>
+        </button>
+        <button type="button" class="btn btn-danger buttonPDF">
+          <a class="download" href="../../dist/curriculo.pdf" Content-Disposition download="3 Currículo - Cleiton Do Carmo"><i class="bi bi-download"></i> Baixar currículo 3</a>
+        </button>
+        <button type="button" class="btn btn-danger buttonPDF">
+          <a class="download" href="dist/curriculo.pdf" Content-Disposition download="4 Currículo - Cleiton Do Carmo"><i class="bi bi-download"></i> Baixar currículo 4</a>
         </button>
       </div>
     </div>
