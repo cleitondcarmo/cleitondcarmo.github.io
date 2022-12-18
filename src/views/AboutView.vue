@@ -1,84 +1,201 @@
+<script setup lang="ts">
+import 'bootstrap/dist/css/bootstrap.css'
+</script>
+
 <template>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
   <div class="about">
-    <div class="divfoto">
-      <img class="foto" src="@/assets/img/foto.jpeg" />
-      <p>Cleiton Do Carmo</p>
+    <div class="containerAbout">
+      <div class="divfoto">
+        <img class="foto" src="@/assets/img/foto.jpeg" />
+      </div>
+      <div class="descricao">
+        <div>
+          <h1>Sobre mim</h1>
+          <p>
+            <!--           Eu me chamo Cleiton Aparecido Do Carmo Silva, nasci em 28 de Junho de 1995, na cidade de São Bernardo Do Campo -
+            SP. Entretanto, atualmente resido com minha família em Urandi, uma pequena cidade do interior da Bahia, com
+            pouco mais de 16 mil habitantes. Sou graduado em Análise e Desenvolvimento de Sistemas pelo Instituto Federal
+            Baiano Campus Guanambi - BA e atuo atualmente como Desenvolvedor de Software. -->
+            Eu me chamo Cleiton Aparecido Do Carmo Silva. Sou graduado em Análise e Desenvolvimento de Sistemas pelo
+            Instituto Federal
+            Baiano Campus Guanambi - BA e atualmente atuo como Desenvolvedor de Software.
+          </p>
+        </div>
+        <div class="infoDiv">
+          <div class="infoSubDiv">
+            <p><span class="negrito">Nome:</span> Cleiton</p>
+            <p><span class="negrito">Endereço:</span> Urandi - BA</p>
+            <p><span class="negrito">Naturalidade:</span> São Bernardo - SP</p>
+            <p><span class="negrito">Idade:</span> 27</p>
+          </div>
+          <div class="infoSubDiv">
+            <p><span class="negrito">Experiência:</span> 8 meses</p>
+            <p><span class="negrito">Primeira linguagem:</span> C</p>
+            <p><span class="negrito">Linguagem favorita:</span> Javascript</p>
+            <p><span class="negrito">Área mais desenvolvida:</span> Front-End</p>
+          </div>
+        </div>
+        <button type="button" class="btn btn-danger buttonPDF">
+          <a class="download" href="../../public/curriculo.pdf" download><i class="bi bi-download"></i> Baixar currículo</a>
+        </button>
+      </div>
     </div>
-    <div class="descricao">
-      <p>
-        Eu me chamo Cleiton Aparecido Do Carmo Silva, nasci em 28 de Junho de 1995, na cidade de São Bernardo Do Campo -
-        SP. Entretanto, atualmente resido com minha família em Urandi, uma pequena cidade do interior da Bahia, com
-        pouco mais de 16 mil habitantes. Sou graduado em Análise e Desenvolvimento de Sistemas pelo Instituto Federal
-        Baiano Campus Guanambi - BA e atuo atualmente como Desenvolvedor de Software.
-      </p>
-    </div>
+
   </div>
 </template>
 
 <style>
+body {
+  background-image: url(../assets/img/background4.jpg);
+  background-size: auto;
+  background-repeat: no-repeat;
+  margin: 0px;
+  padding: 0px;
+}
+
 .about {
+  width: 100vw;
   display: flex;
+  flex-direction: row;
   justify-content: center;
-  padding: 30px;
+  align-items: center;
+}
+
+.containerAbout {
+  width: 800px;
+  height: 390px;
+  display: flex;
+  margin: 20px;
+  transform: translate(-0%);
 }
 
 .divfoto {
-  width: 300px;
   min-height: 300px;
-  text-align: center;
-  border-right: 1px solid green;
-  padding: 40px 20px 0px 20px;
+  padding: 40px 20px 0px 0px;
 }
 
 .foto {
   width: 250px;
   height: 300px;
   text-align: center;
+  padding: 5px;
+  position: relative;
+  background: linear-gradient(to right, rgb(0, 0, 0), 	rgb(0,128,0));
 }
 
 .descricao {
-  width: 300px;
+  width: 450px;
   height: 320px;
-  padding: 35px 20px;
+  padding: 35px 0px;
   text-align: justify;
+  color: white;
 }
 
-p {
+.descricao h1 {
+  font-size: 24px;
+  color: green;
+  font-family: FreeMono, monospace;
+  font-weight: 700;
+
+}
+
+.descricao p {
+  font-size: 12px;
   font-weight: 600;
-  font-size: 16px;
   font-family: sans-serif;
 }
 
+.negrito {
+ font-weight: 700;
+ font-size: 14px;
+}
 
-@media (max-width: 900px) {
-  .about {
-    padding: 0px 10px;
-    width: 100%;
+.infoDiv {
+  width: 100%;
+  height: 150px;
+  border: 1px solid green;
+  border-radius: 10px;
+  margin: auto;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.infoSubDiv {
+  margin: auto;
+}
+
+.infoSubDiv p {
+  margin: 6px;
+}
+
+.download{
+  text-decoration: none;
+  color: black;
+  font-size: 12px;
+  font-weight: 600;
+}
+
+.download:hover{
+  color: black;
+}
+
+.buttonPDF{
+  margin-top: 10px;
+}
+
+@media (max-width: 800px) {
+  body {
+    height: 850px;
   }
 
-  .foto {
-    max-width: 80%;
-    max-height: 200px;
-    text-align: center;
+  .containerAbout {
+    display: grid;
   }
 
   .divfoto {
-    width: 50%;
-    min-height: 200px;
-    padding: 40px 0px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin-bottom: 10px;
+    padding: 0px;
   }
 
   .descricao {
-    width: 50%;
-    padding: 5px;
-    margin: 0px;
-    display: flex;
-    align-items: center;
+    width: 450px;
+    display: grid;
+    text-align: center;
+    margin: auto;
   }
 
-  p {
-    font-size: 12px;
-    font-family: sans-serif;
+  .infoSubDiv p {
+    text-align: left;
+  }
+}
+
+@media (max-width: 550px) {
+  body {
+    height: 900px;
+  }
+
+  .descricao {
+    width: 300px;
+    display: grid;
+    text-align: center;
+    margin: auto;
+  }
+
+  .infoDiv {
+    height: 250px;
+  }
+
+  .infoSubDiv p {
+    text-align: left;
+  }
+  .infoSubDiv{
+    padding: 0px 10px;
+    width: 100%;
   }
 }
 </style>

@@ -16,12 +16,15 @@
   "dependencies": {
     "@coreui/vue": "^4.5.0",
     "bootstrap": "^5.2.3",
+    "bootstrap-icons": "^1.10.2",
     "gh-pages": "^4.0.0",
+    "jquery": "^3.6.2",
     "vue": "^3.2.45",
     "vue-router": "^4.1.6"
   },
   "devDependencies": {
     "@rushstack/eslint-patch": "^1.1.4",
+    "@types/jquery": "^3.5.14",
     "@types/node": "^18.11.9",
     "@vitejs/plugin-vue": "^3.2.0",
     "@vitejs/plugin-vue-jsx": "^2.1.1",

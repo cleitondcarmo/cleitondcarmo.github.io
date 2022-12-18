@@ -1,120 +1,282 @@
 <script setup lang="ts">
 import { RouterLink, RouterView } from 'vue-router'
 import 'bootstrap/dist/css/bootstrap.css'
-import { CAlert, CDropdown, CDropdownDivider, CDropdownItem, CDropdownMenu, CDropdownToggle } from '@coreui/vue';
-
+import { CDropdown, CDropdownItem, CDropdownMenu, CDropdownToggle, CButton } from '@coreui/vue';
 </script>
 
 <template>
-  <header>
-    <div class="wrapper">
-      <nav>
-        <div class="divLogo">
-          <!-- <img class="logo" src="@/assets/logo.svg"/> -->
-          <h1 style="font-size: 60px; color:green">C</h1>
-        </div>
+  <div class="app">
+    <header>
+      <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.2/font/bootstrap-icons.css">
+      <div class="divLogo">
+        <img class="logo" src="@/assets/img/logo.jpg" />
+      </div>
+      <div class="divNav">
         <div class="routersLink">
-          <RouterLink class="btn btn-outline-secondary" to="/">Início</RouterLink>
-          <RouterLink class="btn btn-outline-secondary" to="/about">Sobre</RouterLink>
-          <RouterLink class="btn btn-outline-secondary" to="/contacts">Contatos</RouterLink>
+          <RouterLink id="Home" class="btn btn-outline-secondary" to="/">
+            <i id="iHome" class="bi bi-house-door-fill"></i>
+          </RouterLink>
+          <RouterLink id="About" class="btn btn-outline-secondary" to="/about">
+            <i id="iAbout" class="bi bi-person-vcard-fill"></i>
+          </RouterLink>
+          <RouterLink id="Contact" class="btn btn-outline-secondary" to="/contacts">
+            <i id="iContact" class="bi bi-phone-vibrate"></i>
+          </RouterLink>
         </div>
         <div class="divMenu">
           <CDropdown variant="nav-item">
-            <CDropdownToggle color="secondary"><img class="logo" src="@/assets/img/menu.svg"/></CDropdownToggle>
+            <CDropdownToggle color="secondary"><img src="@/assets/img/menu.svg" /></CDropdownToggle>
             <CDropdownMenu>
-              <CDropdownItem href="#"><RouterLink class="btn btn-outline-secondary" to="/">Início</RouterLink></CDropdownItem>
-              <CDropdownItem href="#"><RouterLink class="btn btn-outline-secondary" to="/about">Sobre</RouterLink></CDropdownItem>
-              <CDropdownItem href="#"><RouterLink class="btn btn-outline-secondary" to="/contacts">Contatos</RouterLink></CDropdownItem>
+              <CDropdownItem href="#">
+                <RouterLink class="btn btn-outline-secondary" to="/"><i id="iHome" class="bi bi-house-door-fill"></i>
+                </RouterLink>
+              </CDropdownItem>
+              <CDropdownItem href="#">
+                <RouterLink class="btn btn-outline-secondary" to="/about"><i id="iAbout"
+                    class="bi bi-person-vcard-fill"></i></RouterLink>
+              </CDropdownItem>
+              <CDropdownItem href="#">
+                <RouterLink class="btn btn-outline-secondary" to="/contacts"><i id="iContact"
+                    class="bi bi-phone-vibrate"></i></RouterLink>
+              </CDropdownItem>
             </CDropdownMenu>
           </CDropdown>
         </div>
-      </nav>
-    </div>
-  </header>
+      </div>
+      <div class="divMost">
+        <div class="perfilApp">
+          <CButton class="btnHref" component="a" href="https://www.facebook.com/cleitondcarmosilva/" role="button"
+            target="_blank">
+            <img class="imgPerfilApp" src="@/assets/img/face.svg" />
+          </CButton>
+        </div>
+        <div class="perfilApp">
+          <CButton class="btnHref" component="a" href="https://www.instagram.com/cleitondcarmo/" role="button"
+            target="_blank">
+            <img class="imgPerfilApp" src="@/assets/img/insta.svg" />
+          </CButton>
+        </div>
+        <div class="perfilApp">
+          <CButton class="btnHref" component="a" href="https://github.com/cleitondcarmo" role="button" target="_blank">
+            <img class="imgPerfilApp" src="@/assets/img/github.svg" />
+          </CButton>
+        </div>
+        <div class="perfilApp">
+          <CButton class="btnHref" component="a" href="https://www.linkedin.com/in/cleitondcarmo/" role="button"
+            target="_blank">
+            <img class="imgPerfilApp" src="@/assets/img/linkedin.svg" />
+          </CButton>
+        </div>
+      </div>
+    </header>
 
-  <body>
-    <RouterView />
-  </body>
+    <body>
+      <RouterView />
+    </body>
+  </div>
 </template>
 
 <style scoped>
-.divLogo {
-  width: 80px;
-  height: 80px;
-  margin: 10px;
-  margin-left: 150px;
-  display: inline;
-  float: left;
-  border: 1px solid green;
+#iHome,
+#iAbout,
+#iContact {
+  font-size: 24px;
+  color: #969494;
+}
+
+#Contact:hover,
+#About:hover,
+#Home:hover {
+  background-color: #404140;
+}
+
+#Contact:hover #iContact,
+#About:hover #iAbout,
+#Home:hover #iHome {
+  color: #008000;
 }
 
 .logo {
-  width: 80px;
-  height: 80px;
+  width: 40px;
+  height: 40px;
 }
 
-nav {
-  width: 100%;
-  height: 100px;
-  font-size: 12px;
+.routersLink {
+  max-width: 50px;
+  max-height: 100%;
   text-align: center;
   align-items: center;
-  background-color: black;
 }
 
-@media (min-width: 901px) {
-  .routersLink {
-    width: auto;
-    height: 100px;
-    margin-right: 100px;
-    display: flex;
-    float: right;
-    text-align: center;
-    align-items: center;
+.routersLink a {
+  width: 40px;
+  height: 40px;
+  border: 0px;
+  padding: 0px;
+  margin: 5px;
+}
+
+@media (min-width: 801px) {
+  .btn{
+    display: block;
+    padding: 0px;
+  }
+  .app {
+    display: grid;
+    grid-template-columns: 50px 100%;
+    grid-template-rows: 100vh;
   }
 
-  .routersLink a {
-    margin: auto 20px;
-    font-size: 18px;
-    width: 140px;
-    color: rgb(194, 197, 199);
-    padding: 4px;
-    border: 1px solid green;
+  header {
+    grid-column-start: 1;
+    grid-column-end: 2;
+    min-height: 100%;
+    background-color: black;
+    display: grid;
+    grid-template-rows: 25% 50% 25%;
+  }
+
+  .perfilApp {
+    width: 20px;
+    height: 20px;
+    display: flex;
+    justify-content: center;
+    padding: 0px;
+    margin: 10px auto;
+  }
+
+  .imgPerfilApp {
+    max-width: 20px;
+    max-height: 20px;
+    min-width: 20px;
+    min-height: 20px;
+    margin: auto;
+  }
+
+  .divLogo {
+    grid-column-start: 2;
+    grid-column-end: 2;
+    width: 50px;
+  }
+
+  .logo{
+    margin: 5px;
   }
 
   .menu {
     display: none;
+    width: 0px;
   }
 
   .divMenu {
     display: none;
+    width: 0px;
+  }
+
+  .divNav {
+    width: 50px;
+    max-height: 100%;
+    font-size: 12px;
+    text-align: center;
+    background-color: black;
+    grid-column-start: 2;
+    grid-column-end: 2;
+    display: flex;
+    align-items: center;
+  }
+
+  .divMost {
+    grid-column-start: 2;
+    grid-column-end: 3;
+    margin: auto;
+  }
+
+  body {
+    grid-column-start: 2;
+    grid-column-end: 2;
   }
 }
 
-@media (max-width: 900px) {
+@media (max-width: 800px) {
+  .app {
+    display: grid;
+    grid-template-rows: 80px 600px;
+  }
+
+  header {
+    grid-row-start: 1;
+    grid-row-end: 2;
+    background-color: black;
+    display: grid;
+    grid-template-columns: 80px calc(100% - 100px);
+  }
+
   .routersLink {
     display: none;
+    max-width: 0px;
   }
 
   .divLogo {
-    margin-left: 20px;
+    width: 70px;
+    height: 70px;
+    margin: 5px;
+  }
+
+  .logo {
+    width: 70px;
+    height: 70px;
+  }
+
+  .divNav {
+    width: 100%;
+    max-height: 100%;
+    font-size: 12px;
+    text-align: center;
+    display: flex;
+    align-items: flex-end;
+    justify-content: flex-end;
+    background-color: black;
+    float: right;
   }
 
   .divMenu {
     display: flex;
     justify-content: center;
-    width: 80px;
+    width: 50px;
     height: 80px;
-    padding: 10px;
-    float: right;
+  }
+
+  .divMost {
+    display: none;
   }
 
   .menu {
     width: 50px;
     height: 50px;
   }
-  .btn-outline-secondary{
+
+  .btn-outline-secondary {
     width: 100%;
+  }
+
+  .divMenu img {
+    width: 50px;
+    height: 50px;
+    margin: 15px 0px
+  }
+
+  .dropdown-toggle::after {
+    border: none;
+    content: none;
+  }
+
+  .divMenu a :hover {
+    background-color: rgb(100, 102, 100);
+    border-radius: 100%;
+  }
+
+  .divMenu a {
+    color: green;
   }
 }
 </style>
