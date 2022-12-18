@@ -37,7 +37,7 @@ import 'bootstrap/dist/css/bootstrap.css'
           </div>
         </div>
         <button type="button" class="btn btn-danger buttonPDF">
-          <a class="download" href="../../dist/curriculo.pdf" download><i class="bi bi-download"></i> Baixar currículo</a>
+          <a class="download" href="public/curriculo.pdf" download="Currículo - Cleiton Do Carmo"><i class="bi bi-download"></i> Baixar currículo</a>
         </button>
       </div>
     </div>
