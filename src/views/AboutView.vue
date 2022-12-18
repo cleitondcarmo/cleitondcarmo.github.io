@@ -37,7 +37,7 @@ import 'bootstrap/dist/css/bootstrap.css'
           </div>
         </div>
         <button type="button" class="btn btn-danger buttonPDF">
-          <a class="download" href="public/curriculo.pdf" Content-Type="application/octet-stream" Content-Disposition: attachment download="Currículo - Cleiton Do Carmo"><i class="bi bi-download"></i> Baixar currículo</a>
+          <a class="download" href="public/curriculo.pdf" Content-Type="application/pdf" Content-Disposition: attachment download="Currículo - Cleiton Do Carmo"><i class="bi bi-download"></i> Baixar currículo</a>
         </button>
         <button type="button" class="btn btn-danger buttonPDF">
           <a class="download" href="../../public/curriculo.pdf" Content-Disposition: attachment download="2 Currículo - Cleiton Do Carmo"><i class="bi bi-download"></i> Baixar currículo 2</a>
