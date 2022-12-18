@@ -189,6 +189,7 @@ import { CDropdown, CDropdownItem, CDropdownMenu, CDropdownToggle, CButton } fro
     grid-column-start: 2;
     grid-column-end: 3;
     margin: auto;
+    padding-bottom: 30px;
   }
 
   body {

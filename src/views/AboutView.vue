@@ -27,7 +27,7 @@ import 'bootstrap/dist/css/bootstrap.css'
             <p><span class="negrito">Nome:</span> Cleiton</p>
             <p><span class="negrito">Endereço:</span> Urandi - BA</p>
             <p><span class="negrito">Naturalidade:</span> São Bernardo - SP</p>
-            <p><span class="negrito">Idade:</span> 27</p>
+            <p><span class="negrito">Data de Nasc.:</span> 28/06/1995</p>
           </div>
           <div class="infoSubDiv">
             <p><span class="negrito">Experiência:</span> 8 meses</p>
@@ -37,7 +37,7 @@ import 'bootstrap/dist/css/bootstrap.css'
           </div>
         </div>
         <button type="button" class="btn btn-danger buttonPDF">
-          <a class="download" href="../../public/curriculo.pdf" download><i class="bi bi-download"></i> Baixar currículo</a>
+          <a class="download" href="../../dist/curriculo.pdf" download><i class="bi bi-download"></i> Baixar currículo</a>
         </button>
       </div>
     </div>
