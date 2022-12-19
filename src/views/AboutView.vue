@@ -1,5 +1,7 @@
 <script setup lang="ts">
 import 'bootstrap/dist/css/bootstrap.css'
+import { RouterLink, RouterView } from 'vue-router'
+
 </script>
 
 <template>
@@ -38,7 +40,7 @@ import 'bootstrap/dist/css/bootstrap.css'
           </div>
         </div>
         <button type="button" class="btn btn-danger buttonPDF">
-          <a class="download" href="cleitondcarmo.github.io/public/curriculo.pdf" download="Currículo-Cleiton-Do-Carmo.pdf"><i class="bi bi-download"></i>
+          <a class="download" href="cleitondcarmo.github.io/public/curriculo.pdf" Content-Disposition: inline download="Currículo-Cleiton-Do-Carmo.pdf"><i class="bi bi-download"></i>
             Baixar currículo</a>
         </button>
         <button type="button" class="btn btn-danger buttonPDF" download v-on:click="download()">
@@ -63,7 +65,7 @@ export default defineComponent({
         clickedDownload(){
         const link = document.createElement('a');
       link.href = 'cleitondcarmo.github.io/public/curriculo.pdf';
-      link.setAttribute('download', 'file.pdf'); //or any other extension
+      link.setAttribute('download', 'file.pdf');
       document.body.appendChild(link);
       link.click();
     }
@@ -78,7 +80,7 @@ function download() {
   })
     .then(response => {
       const url = window.URL
-        .createObjectURL(new Blob([response.data], { type: 'application/pdf' }));
+        .createObjectURL(new Blob([response.data], { type: 'application/octet-stream' }));
       const link = document.createElement('a');
       link.download = 'file.pdf';
       link.href = url;
