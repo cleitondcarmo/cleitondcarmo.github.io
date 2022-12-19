@@ -57,7 +57,7 @@ function download() {
   axios({
     url: 'cleitondcarmo.github.io/public/curriculo.pdf',
     method: 'GET',
-    responseType: 'blob'
+    responseType: 'arraybuffer'
   })
     .then(response => {
       const url = window.URL
