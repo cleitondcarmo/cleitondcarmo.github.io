@@ -38,7 +38,7 @@ import 'bootstrap/dist/css/bootstrap.css'
           </div>
         </div>
         <button type="button" class="btn btn-danger buttonPDF">
-          <a class="download" href="public/curriculo.pdf" Content-Type="application/pdf" Content-Disposition: attachment
+          <a class="download" href="cleitondcarmo.github.io/public/curriculo.pdf" Content-Type="application/pdf" Content-Disposition: attachment
             download="Currículo-Cleiton-Do-Carmo.pdf"><i class="bi bi-download"></i> Baixar currículo</a>
         </button>
         <button type="button" class="btn btn-danger buttonPDF" v-on:click="download()">
@@ -54,21 +54,10 @@ import 'bootstrap/dist/css/bootstrap.css'
 import axios from 'axios'
 
 function download() {
-  axios({
-    url: 'cleitondcarmo.github.io/public/curriculo.pdf',
-    method: 'GET',
-    responseType: 'blob'
-  })
-    .then((response: { data: BlobPart; }) => {
-      const url = window.URL
-        .createObjectURL(new Blob([response.data]));
-      const link = document.createElement('a');
-      link.href = url;
-      link.setAttribute('download', 'Currículo - Cleiton Do Carmo.pdf');
-      document.body.appendChild(link);
-      link.click();
-      document.body.removeChild(link);
-    })
+  var link = document.createElement("a");
+  link.download = "Currículo";
+  link.href = 'cleitondcarmo.github.io/public/curriculo.pdf';
+  link.click();
 }
 </script>
 
