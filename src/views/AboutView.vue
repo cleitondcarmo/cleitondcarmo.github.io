@@ -38,10 +38,11 @@ import 'bootstrap/dist/css/bootstrap.css'
           </div>
         </div>
         <button type="button" class="btn btn-danger buttonPDF">
-          <a class="download" href="cleitondcarmo.github.io/public/curriculo.pdf" Content-Type="application/pdf" Content-Disposition: attachment
-            download="Currículo-Cleiton-Do-Carmo.pdf"><i class="bi bi-download"></i> Baixar currículo</a>
+          <a class="download" href="cleitondcarmo.github.io/public/curriculo.pdf" Content-Type="application/pdf"
+            Content-Disposition: attachment download="Currículo-Cleiton-Do-Carmo.pdf"><i class="bi bi-download"></i>
+            Baixar currículo</a>
         </button>
-        <button type="button" class="btn btn-danger buttonPDF" v-on:click="download()">
+        <button type="button" class="btn btn-danger buttonPDF" download v-on:click="download()">
           <i class="bi bi-download"></i> Baixar currículo 2
         </button>
       </div>
@@ -61,13 +62,11 @@ function download() {
   })
     .then(response => {
       const url = window.URL
-        .createObjectURL(new Blob([response.data], {type: 'application/pdf'}));
+        .createObjectURL(new Blob([response.data], { type: 'application/pdf' }));
       const link = document.createElement('a');
       link.href = url;
-      link.setAttribute('download', 'Currículo-Cleiton_Do_Carmo.pdf');
-      document.body.appendChild(link);
-      link.click();
-      window.URL.revokeObjectURL(url);
+      link.download = 'file.pdf';
+      link.dispatchEvent(new MouseEvent('click'));
     })
 }
 </script>
