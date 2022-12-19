@@ -38,14 +38,12 @@ import 'bootstrap/dist/css/bootstrap.css'
           </div>
         </div>
         <button type="button" class="btn btn-danger buttonPDF">
-          <a class="download" href="cleitondcarmo.github.io/public/curriculo.pdf" 
+          <a class="download" href="cleitondcarmo.github.io/public/curriculo.pdf" Content-Type="application/pdf" Content-Disposition: attachment
             download="Currículo-Cleiton-Do-Carmo.pdf"><i class="bi bi-download"></i> Baixar currículo</a>
         </button>
         <button type="button" class="btn btn-danger buttonPDF" v-on:click="download()">
           <i class="bi bi-download"></i> Baixar currículo 2
         </button>
-        <a class="download" href="cleitondcarmo.github.io/public/curriculo.pdf" 
-            download="Currículo-Cleiton-Do-Carmo.pdf"  v-on:click="download()"><i class="bi bi-download"></i> Baixar currículo</a>
       </div>
     </div>
 
@@ -56,11 +54,21 @@ import 'bootstrap/dist/css/bootstrap.css'
 import axios from 'axios'
 
 function download() {
-  var link = document.createElement("a");
-  link.download = "Currículo.pdf";
-  link.href = 'cleitondcarmo.github.io/public/curriculo.pdf';
-  link.click();
-  console.log(link);
+  axios({
+    url: 'cleitondcarmo.github.io/public/curriculo.pdf',
+    method: 'GET',
+    responseType: 'blob'
+  })
+    .then((response: { data: BlobPart; }) => {
+      const url = window.URL
+        .createObjectURL(new Blob([response.data], {type: 'application/pdf'}));
+      const link = document.createElement('a');
+      link.href = url;
+      link.setAttribute('download', 'Currículo-Cleiton_Do_Carmo.pdf');
+      document.body.appendChild(link);
+      link.click();
+      document.body.removeChild(link);
+    })
 }
 </script>
 
