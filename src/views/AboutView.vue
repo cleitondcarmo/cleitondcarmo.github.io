@@ -3,7 +3,8 @@ import 'bootstrap/dist/css/bootstrap.css'
 </script>
 
 <template>
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
   <div class="about">
     <div class="containerAbout">
       <div class="divfoto">
@@ -37,23 +38,46 @@ import 'bootstrap/dist/css/bootstrap.css'
           </div>
         </div>
         <button type="button" class="btn btn-danger buttonPDF">
-          <a class="download" href="public/curriculo.pdf" Content-Type="application/pdf" Content-Disposition: attachment download="Currículo - Cleiton Do Carmo"><i class="bi bi-download"></i> Baixar currículo</a>
+          <a class="download" href="public/curriculo.pdf" Content-Type="application/pdf" Content-Disposition: attachment
+            download="Currículo - Cleiton Do Carmo"><i class="bi bi-download"></i> Baixar currículo</a>
         </button>
         <button type="button" class="btn btn-danger buttonPDF">
-          <a class="download" href="../../public/curriculo.pdf" Content-Disposition: attachment download="2 Currículo - Cleiton Do Carmo"><i class="bi bi-download"></i> Baixar currículo 2</a>
+          <a class="download" href="../../public/curriculo.pdf" Content-Disposition: attachment
+            download="2 Currículo - Cleiton Do Carmo"><i class="bi bi-download"></i> Baixar currículo 2</a>
         </button>
         <button type="button" class="btn btn-danger buttonPDF">
-          <a class="download" href="../../public/curriculo.pdf"  Content-Type="application/octet-stream" download="3 Currículo - Cleiton Do Carmo"><i class="bi bi-download"></i> Baixar currículo 3</a>
+          <a class="download" href="src/assets/img/background3.jpg" download="3 Currículo - Cleiton Do Carmo"><i
+              class="bi bi-download"></i> Baixar currículo 3</a>
         </button>
-        <button type="button" class="btn btn-danger buttonPDF">
-          <a class="download" href="public/curriculo.pdf" Content-Type="application/octet-stream" Content-Disposition: attachment download><i class="bi bi-download"></i> Baixar currículo 4</a>
+        <button type="button" class="btn btn-danger buttonPDF" v-on:click="download()">
+          <i class="bi bi-download"></i> Baixar currículo 4
         </button>
       </div>
     </div>
 
   </div>
 </template>
+<script lang="ts">
+import axios from 'axios'
 
+function download() {
+  axios({
+    url: 'public/curriculo.pdf',
+    method: 'GET',
+    responseType: 'blob'
+  })
+    .then((response: { data: BlobPart; }) => {
+      const url = window.URL
+        .createObjectURL(new Blob([response.data]));
+      const link = document.createElement('a');
+      link.href = url;
+      link.setAttribute('download', 'Currículo - Cleiton Do Carmo.pdf');
+      document.body.appendChild(link);
+      link.click();
+      document.body.removeChild(link);
+    })
+}
+</script>
 <style>
 body {
   background-image: url(../assets/img/background4.jpg);
@@ -90,7 +114,7 @@ body {
   text-align: center;
   padding: 5px;
   position: relative;
-  background: linear-gradient(to right, rgb(0, 0, 0), 	rgb(0,128,0));
+  background: linear-gradient(to right, rgb(0, 0, 0), rgb(0, 128, 0));
 }
 
 .descricao {
@@ -116,8 +140,8 @@ body {
 }
 
 .negrito {
- font-weight: 700;
- font-size: 14px;
+  font-weight: 700;
+  font-size: 14px;
 }
 
 .infoDiv {
@@ -139,18 +163,18 @@ body {
   margin: 6px;
 }
 
-.download{
+.download {
   text-decoration: none;
   color: black;
   font-size: 12px;
   font-weight: 600;
 }
 
-.download:hover{
+.download:hover {
   color: black;
 }
 
-.buttonPDF{
+.buttonPDF {
   margin-top: 10px;
 }
 
@@ -202,7 +226,8 @@ body {
   .infoSubDiv p {
     text-align: left;
   }
-  .infoSubDiv{
+
+  .infoSubDiv {
     padding: 0px 10px;
     width: 100%;
   }

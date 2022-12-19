@@ -15,6 +15,7 @@
   },
   "dependencies": {
     "@coreui/vue": "^4.5.0",
+    "axios": "^1.2.1",
     "bootstrap": "^5.2.3",
     "bootstrap-icons": "^1.10.2",
     "gh-pages": "^4.0.0",
