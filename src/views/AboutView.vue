@@ -38,7 +38,7 @@ import 'bootstrap/dist/css/bootstrap.css'
           </div>
         </div>
         <button type="button" class="btn btn-danger buttonPDF">
-          <a class="download" href="cleitondcarmo.github.io/public/curriculo.pdf" Content-Type="application/pdf" Content-Disposition: attachment
+          <a class="download" href="cleitondcarmo.github.io/public/curriculo.pdf" 
             download="Currículo-Cleiton-Do-Carmo.pdf"><i class="bi bi-download"></i> Baixar currículo</a>
         </button>
         <button type="button" class="btn btn-danger buttonPDF" v-on:click="download()">
@@ -55,9 +55,10 @@ import axios from 'axios'
 
 function download() {
   var link = document.createElement("a");
-  link.download = "Currículo";
+  link.download = "Currículo.pdf";
   link.href = 'cleitondcarmo.github.io/public/curriculo.pdf';
   link.click();
+  console.log(link);
 }
 </script>
 
