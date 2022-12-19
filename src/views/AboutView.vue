@@ -39,30 +39,23 @@ import 'bootstrap/dist/css/bootstrap.css'
         </div>
         <button type="button" class="btn btn-danger buttonPDF">
           <a class="download" href="public/curriculo.pdf" Content-Type="application/pdf" Content-Disposition: attachment
-            download="Currículo - Cleiton Do Carmo"><i class="bi bi-download"></i> Baixar currículo</a>
-        </button>
-        <button type="button" class="btn btn-danger buttonPDF">
-          <a class="download" href="../../public/curriculo.pdf" Content-Disposition: attachment
-            download="2 Currículo - Cleiton Do Carmo"><i class="bi bi-download"></i> Baixar currículo 2</a>
-        </button>
-        <button type="button" class="btn btn-danger buttonPDF">
-          <a class="download" href="src/assets/img/background3.jpg" download="3 Currículo - Cleiton Do Carmo"><i
-              class="bi bi-download"></i> Baixar currículo 3</a>
+            download="Currículo-Cleiton-Do-Carmo.pdf"><i class="bi bi-download"></i> Baixar currículo</a>
         </button>
         <button type="button" class="btn btn-danger buttonPDF" v-on:click="download()">
-          <i class="bi bi-download"></i> Baixar currículo 4
+          <i class="bi bi-download"></i> Baixar currículo 2
         </button>
       </div>
     </div>
 
   </div>
 </template>
+
 <script lang="ts">
 import axios from 'axios'
 
 function download() {
   axios({
-    url: 'public/curriculo.pdf',
+    url: 'cleitondcarmo.github.io/public/curriculo.pdf',
     method: 'GET',
     responseType: 'blob'
   })
@@ -78,6 +71,7 @@ function download() {
     })
 }
 </script>
+
 <style>
 body {
   background-image: url(../assets/img/background4.jpg);
