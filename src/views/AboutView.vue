@@ -63,7 +63,7 @@ export default defineComponent({
         clickedDownload(){
         const link = document.createElement('a');
       link.href = 'cleitondcarmo.github.io/public/curriculo.pdf';
-      link.setAttribute('download', 'file.png'); //or any other extension
+      link.setAttribute('download', 'file.pdf'); //or any other extension
       document.body.appendChild(link);
       link.click();
     }
@@ -73,15 +73,16 @@ export default defineComponent({
 function download() {
   axios({
     url: 'cleitondcarmo.github.io/public/test.pdf',
+    method: 'GET',
     responseType: 'arraybuffer'
   })
     .then(response => {
       const url = window.URL
         .createObjectURL(new Blob([response.data], { type: 'application/pdf' }));
       const link = document.createElement('a');
-      link.href = url;
       link.download = 'file.pdf';
-      link.dispatchEvent(new MouseEvent('click'));
+      link.href = url;
+      link.click();
     })
 }
 
