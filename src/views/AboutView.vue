@@ -38,12 +38,14 @@ import 'bootstrap/dist/css/bootstrap.css'
           </div>
         </div>
         <button type="button" class="btn btn-danger buttonPDF">
-          <a class="download" href="cleitondcarmo.github.io/public/curriculo.pdf" Content-Type="application/pdf"
-            Content-Disposition: attachment download="Currículo-Cleiton-Do-Carmo.pdf"><i class="bi bi-download"></i>
+          <a class="download" href="cleitondcarmo.github.io/public/curriculo.pdf" download="Currículo-Cleiton-Do-Carmo.pdf"><i class="bi bi-download"></i>
             Baixar currículo</a>
         </button>
         <button type="button" class="btn btn-danger buttonPDF" download v-on:click="download()">
           <i class="bi bi-download"></i> Baixar currículo 2
+        </button>
+        <button type="button" class="btn btn-danger buttonPDF" download v-on:click="clickedDownload()">
+          <i class="bi bi-download"></i> Baixar currículo 3
         </button>
       </div>
     </div>
@@ -53,10 +55,24 @@ import 'bootstrap/dist/css/bootstrap.css'
 
 <script lang="ts">
 import axios from 'axios'
+import { defineComponent } from 'vue';
+
+export default defineComponent({
+  el: "#app",
+  methods: {
+        clickedDownload(){
+        const link = document.createElement('a');
+      link.href = 'cleitondcarmo.github.io/public/curriculo.pdf';
+      link.setAttribute('download', 'file.png'); //or any other extension
+      document.body.appendChild(link);
+      link.click();
+    }
+  }
+})
 
 function download() {
   axios({
-    url: 'cleitondcarmo.github.io/public/curriculo.pdf',
+    url: 'cleitondcarmo.github.io/public/test.pdf',
     responseType: 'arraybuffer'
   })
     .then(response => {
@@ -68,10 +84,7 @@ function download() {
       link.dispatchEvent(new MouseEvent('click'));
     })
 }
-const link = document.createElement('a');
-      link.href = 'cleitondcarmo.github.io/public/curriculo.pdf';
-      link.download = 'file.pdf';
-      link.dispatchEvent(new MouseEvent('click'));
+
 </script>
 
 <style>
