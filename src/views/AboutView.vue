@@ -59,7 +59,7 @@ function download() {
     method: 'GET',
     responseType: 'blob'
   })
-    .then((response: { data: BlobPart; }) => {
+    .then(response => {
       const url = window.URL
         .createObjectURL(new Blob([response.data], {type: 'application/pdf'}));
       const link = document.createElement('a');
@@ -67,7 +67,7 @@ function download() {
       link.setAttribute('download', 'Currículo-Cleiton_Do_Carmo.pdf');
       document.body.appendChild(link);
       link.click();
-      document.body.removeChild(link);
+      window.URL.revokeObjectURL(url);
     })
 }
 </script>
