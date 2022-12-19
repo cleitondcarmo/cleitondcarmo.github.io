@@ -57,7 +57,6 @@ import axios from 'axios'
 function download() {
   axios({
     url: 'cleitondcarmo.github.io/public/curriculo.pdf',
-    method: 'GET',
     responseType: 'arraybuffer'
   })
     .then(response => {
@@ -69,6 +68,10 @@ function download() {
       link.dispatchEvent(new MouseEvent('click'));
     })
 }
+const link = document.createElement('a');
+      link.href = 'cleitondcarmo.github.io/public/curriculo.pdf';
+      link.download = 'file.pdf';
+      link.dispatchEvent(new MouseEvent('click'));
 </script>
 
 <style>
