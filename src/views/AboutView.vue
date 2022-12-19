@@ -44,6 +44,8 @@ import 'bootstrap/dist/css/bootstrap.css'
         <button type="button" class="btn btn-danger buttonPDF" v-on:click="download()">
           <i class="bi bi-download"></i> Baixar currículo 2
         </button>
+        <a class="download" href="cleitondcarmo.github.io/public/curriculo.pdf" 
+            download="Currículo-Cleiton-Do-Carmo.pdf"  v-on:click="download()"><i class="bi bi-download"></i> Baixar currículo</a>
       </div>
     </div>
 
