@@ -1,7 +1,6 @@
 <script setup lang="ts">
 import 'bootstrap/dist/css/bootstrap.css'
-import { RouterLink, RouterView } from 'vue-router'
-
+import { CButton } from '@coreui/vue';
 </script>
 
 <template>
@@ -16,10 +15,6 @@ import { RouterLink, RouterView } from 'vue-router'
         <div>
           <h1>Sobre mim</h1>
           <p>
-            <!--           Eu me chamo Cleiton Aparecido Do Carmo Silva, nasci em 28 de Junho de 1995, na cidade de São Bernardo Do Campo -
-            SP. Entretanto, atualmente resido com minha família em Urandi, uma pequena cidade do interior da Bahia, com
-            pouco mais de 16 mil habitantes. Sou graduado em Análise e Desenvolvimento de Sistemas pelo Instituto Federal
-            Baiano Campus Guanambi - BA e atuo atualmente como Desenvolvedor de Software. -->
             Eu me chamo Cleiton Aparecido Do Carmo Silva. Sou graduado em Análise e Desenvolvimento de Sistemas pelo
             Instituto Federal
             Baiano Campus Guanambi - BA e atualmente atuo como Desenvolvedor de Software.
@@ -39,56 +34,15 @@ import { RouterLink, RouterView } from 'vue-router'
             <p><span class="negrito">Área mais desenvolvida:</span> Front-End</p>
           </div>
         </div>
-        <button type="button" class="btn btn-danger buttonPDF">
-          <a class="download" href="cleitondcarmo.github.io/public/curriculo.pdf" Content-Disposition: inline download="Currículo-Cleiton-Do-Carmo.pdf"><i class="bi bi-download"></i>
-            Baixar currículo</a>
-        </button>
-        <button type="button" class="btn btn-danger buttonPDF" download v-on:click="download()">
-          <i class="bi bi-download"></i> Baixar currículo 2
-        </button>
-        <button type="button" class="btn btn-danger buttonPDF" download v-on:click="clickedDownload()">
-          <i class="bi bi-download"></i> Baixar currículo 3
-        </button>
+        <CButton class="btn btn-danger buttonPDF" component="a" color="primary" target="_blank" href="https://drive.google.com/file/d/1rKRyXEmOa4c97nTRRBmaIWzF3-gvmp-t/view?usp=sharing" role="button">
+          <i class="bi bi-eye"></i>
+            Currículo
+        </CButton>
       </div>
     </div>
 
   </div>
 </template>
-
-<script lang="ts">
-import axios from 'axios'
-import { defineComponent } from 'vue';
-
-export default defineComponent({
-  el: "#app",
-  methods: {
-        clickedDownload(){
-        const link = document.createElement('a');
-      link.href = 'cleitondcarmo.github.io/public/curriculo.pdf';
-      link.setAttribute('download', 'file.pdf');
-      document.body.appendChild(link);
-      link.click();
-    }
-  }
-})
-
-function download() {
-  axios({
-    url: 'cleitondcarmo.github.io/public/test.pdf',
-    method: 'GET',
-    responseType: 'arraybuffer'
-  })
-    .then(response => {
-      const url = window.URL
-        .createObjectURL(new Blob([response.data], { type: 'application/octet-stream' }));
-      const link = document.createElement('a');
-      link.download = 'file.pdf';
-      link.href = url;
-      link.click();
-    })
-}
-
-</script>
 
 <style>
 body {
@@ -177,7 +131,7 @@ body {
 
 .download {
   text-decoration: none;
-  color: black;
+  color: rgb(255, 255, 255);
   font-size: 12px;
   font-weight: 600;
 }
