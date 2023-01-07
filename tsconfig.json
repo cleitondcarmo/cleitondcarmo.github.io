@@ -3,7 +3,7 @@
   "include": ["env.d.ts", "src/**/*", "src/**/*.vue"],
   "compilerOptions": {
     "baseUrl": ".",
-    "module": "amd",
+    "module": "esnext",
     "lib": ["dom", "es2018"],
     "noImplicitAny": false,
     "removeComments": false,
