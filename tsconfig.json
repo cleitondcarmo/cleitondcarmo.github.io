@@ -4,6 +4,7 @@
   "compilerOptions": {
     "baseUrl": ".",
     "module": "amd",
+    "lib": ["dom", "es2018"],
     "noImplicitAny": false,
     "removeComments": false,
     "paths": {
