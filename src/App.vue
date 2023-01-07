@@ -22,22 +22,33 @@ import { CDropdown, CDropdownItem, CDropdownMenu, CDropdownToggle, CButton } fro
           <RouterLink id="Contact" class="btn btn-outline-secondary" to="/contacts">
             <i id="iContact" class="bi bi-phone-vibrate"></i>
           </RouterLink>
+          <RouterLink id="Projects" class="btn btn-outline-secondary" to="/projects">
+            <i id="iProjects" class="bi bi-code-slash"></i>
+          </RouterLink>
         </div>
         <div class="divMenu">
           <CDropdown variant="nav-item">
             <CDropdownToggle color="secondary"><img src="@/assets/img/menu.svg" /></CDropdownToggle>
             <CDropdownMenu>
               <CDropdownItem href="#">
-                <RouterLink class="btn btn-outline-secondary" to="/"><i id="iHome" class="bi bi-house-door-fill"></i>
+                <RouterLink class="btn btn-outline-secondary" to="/">
+                  <i id="iHome" class="bi bi-house-door-fill"></i>
                 </RouterLink>
               </CDropdownItem>
               <CDropdownItem href="#">
-                <RouterLink class="btn btn-outline-secondary" to="/about"><i id="iAbout"
-                    class="bi bi-person-vcard-fill"></i></RouterLink>
+                <RouterLink class="btn btn-outline-secondary" to="/about">
+                  <i id="iAbout" class="bi bi-person-vcard-fill"></i>
+                </RouterLink>
               </CDropdownItem>
               <CDropdownItem href="#">
-                <RouterLink class="btn btn-outline-secondary" to="/contacts"><i id="iContact"
-                    class="bi bi-phone-vibrate"></i></RouterLink>
+                <RouterLink class="btn btn-outline-secondary" to="/contacts">
+                  <i id="iContact" class="bi bi-phone-vibrate"></i>
+                </RouterLink>
+              </CDropdownItem>
+              <CDropdownItem href="#">
+                <RouterLink id="Projects" class="btn btn-outline-secondary" to="/projects">
+                  <i id="iProjects" class="bi bi-code-slash"></i>
+                </RouterLink>
               </CDropdownItem>
             </CDropdownMenu>
           </CDropdown>
@@ -79,7 +90,8 @@ import { CDropdown, CDropdownItem, CDropdownMenu, CDropdownToggle, CButton } fro
 <style scoped>
 #iHome,
 #iAbout,
-#iContact {
+#iContact,
+#iProjects {
   font-size: 24px;
   color: #969494;
 }
@@ -117,10 +129,11 @@ import { CDropdown, CDropdownItem, CDropdownMenu, CDropdownToggle, CButton } fro
 }
 
 @media (min-width: 801px) {
-  .btn{
+  .btn {
     display: block;
     padding: 0px;
   }
+
   .app {
     display: grid;
     grid-template-columns: 50px 100%;
@@ -159,7 +172,7 @@ import { CDropdown, CDropdownItem, CDropdownMenu, CDropdownToggle, CButton } fro
     width: 50px;
   }
 
-  .logo{
+  .logo {
     margin: 5px;
   }
 

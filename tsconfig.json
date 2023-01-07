@@ -3,6 +3,9 @@
   "include": ["env.d.ts", "src/**/*", "src/**/*.vue"],
   "compilerOptions": {
     "baseUrl": ".",
+    "module": "amd",
+    "noImplicitAny": false,
+    "removeComments": false,
     "paths": {
       "@/*": ["./src/*"]
     }
