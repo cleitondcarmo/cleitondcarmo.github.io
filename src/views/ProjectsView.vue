@@ -41,7 +41,7 @@ export default {
             data: {
                 labels: ['Javascript', 'PHP', 'Java', 'C', 'Python', 'HTML/CSS', 'SQL', 'NoSQL'],
                 datasets: [{
-                    label: 'Conhecimento em linguagens',
+                    label: 'Linguagens',
                     data: [90, 90, 94, 92, 80, 100, 95, 75],
                     backgroundColor: 'rgba(54, 162, 235, 0.2)',
                     borderColor: '#000000',
@@ -57,7 +57,7 @@ export default {
                         display: true,
                         labels: {
                             color: "#000000",
-                            font: { size: 20 }
+                            font: { size: 16, weight: 500 }
                         }
                     },
                 },
@@ -87,7 +87,6 @@ export default {
         },
     }
 };
-
 </script>
 
 <template>
@@ -96,92 +95,76 @@ export default {
             <div>
                 <h1 class="titulos">HABILIDADES</h1>
             </div>
-            <scroll-container>
-                <scroll-page>
-                    <div class="containerPage1">
-                        <div style="padding: 0px 40px;">
-                            <Radar :data="data" :options="options" />
-                        </div>
-                        <div style="padding: 0px 40px; text-align: center;">
-                            <div>
-                                <h4>Experiência</h4>
-                                <div
-                                    style="display: flex; flex-wrap: wrap;  justify-content: center; text-align: center;">
-                                    <div class="divFramework">
-                                        <img src="../assets/img/vue.svg" alt="Vue">
-                                        <p>VueJs</p>
-                                    </div>
-                                    <div class="divFramework">
-                                        <img src="../assets/img/quasar.svg" alt="quasar">
-                                        <p>Quasar</p>
-                                    </div>
-                                    <div class="divFramework">
-                                        <img src="../assets/img/javascript.svg" alt="javascript">
-                                        <p>Javascript</p>
-                                    </div>
-                                    <div class="divFramework">
-                                        <img src="../assets/img/node.svg" alt="Node">
-                                        <p>NodeJs</p>
-                                    </div>
-                                    <div class="divFramework">
-                                        <img src="../assets/img/css3.svg" alt="css">
-                                        <p>CSS3</p>
-                                    </div>
-                                    <div class="divFramework">
-                                        <img src="../assets/img/html5.svg" alt="html">
-                                        <p>HTML5</p>
-                                    </div>
-                                </div>
+            <div class="containerPage1">
+                <div class="blocosSkills" style="text-align: center;">
+                    <p class="subtitulo">Conhecimento</p>
+                    <Radar :data="data" :options="options" />
+                </div>
+                <div class="blocosSkills" style="width: 300px;">
+                    <div class="lista">
+                        <p class="subtitulo">Soft Skills</p>
+                        <ul>
+                            <li>Empatia</li>
+                            <li>Comunicação</li>
+                            <li>Perseverança</li>
+                            <li>Flexibilidade</li>
+                            <li>Autodidata</li>
+                            <li>Organização</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="blocosSkills" style="text-align: center;">
+                    <div>
+                        <p class="subtitulo">Experiência</p>
+                        <div style="display: flex; flex-wrap: wrap;  justify-content: center; text-align: center;">
+                            <div class="divFramework">
+                                <img src="../assets/img/vue.svg" alt="Vue">
+                                <p>VueJs</p>
                             </div>
-                        </div>
-                        <div style="padding: 0px 40px;">
-                            <div class="lista">
-                                <h4 style="text-align: center;">Soft Skills</h4>
-                                <ul>
-                                    <li>Empatia</li>
-                                    <li>Comunicação</li>
-                                    <li>Perseverança</li>
-                                    <li>Flexibilidade</li>
-                                    <li>Autodidata</li>
-                                    <li>Organização</li>
-                                </ul>
+                            <div class="divFramework">
+                                <img src="../assets/img/quasar.svg" alt="quasar">
+                                <p>Quasar</p>
                             </div>
-                            <div style="margin-top: 50px; align-items: center;">
-                                <h4 style="text-align: center;">Frameworks & Bibliotecas</h4>
-                                <div style="display: flex; justify-content: space-around;">
-                                    <div class="divFramework">
-                                        <img src="../assets/img/vue.svg" alt="Vue">
-                                        <p>VueJs</p>
-                                    </div>
-                                    <div class="divFramework">
-                                        <img src="../assets/img/react.svg" alt="Vue">
-                                        <p>React</p>
-                                    </div>
-                                    <div class="divFramework">
-                                        <img src="../assets/img/laravel.svg" alt="Vue">
-                                        <p>Laravel</p>
-                                    </div>
-                                </div>
+                            <div class="divFramework">
+                                <img src="../assets/img/javascript.svg" alt="javascript">
+                                <p>Javascript</p>
+                            </div>
+                            <div class="divFramework">
+                                <img src="../assets/img/node.svg" alt="Node">
+                                <p>NodeJs</p>
+                            </div>
+                            <div class="divFramework">
+                                <img src="../assets/img/css3.svg" alt="css">
+                                <p>CSS3</p>
+                            </div>
+                            <div class="divFramework">
+                                <img src="../assets/img/html5.svg" alt="html">
+                                <p>HTML5</p>
                             </div>
                         </div>
                     </div>
-                </scroll-page>
-            </scroll-container>
+                </div>
+                <div class="blocosSkills" style="">
+                    <p class="subtitulo">Frameworks & Bibliotecas</p>
+                    <div style="display: flex; justify-content: space-around;">
+                        <div class="divFramework">
+                            <img src="../assets/img/vue.svg" alt="Vue">
+                            <p>VueJs</p>
+                        </div>
+                        <div class="divFramework">
+                            <img src="../assets/img/react.svg" alt="Vue">
+                            <p>React</p>
+                        </div>
+                        <div class="divFramework">
+                            <img src="../assets/img/laravel.svg" alt="Vue">
+                            <p>Laravel</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </scroll-page>
         <scroll-page id="page-2">
-<!--             <div>
-                <CCarousel controls>
-                    <CCarouselItem>
-                        <img class="d-block w-100" src="../assets/img/vue.svg" alt="slide 1" />
-                    </CCarouselItem>
-                    <CCarouselItem>
-                        <img class="d-block w-100" src="../assets/img/html5.svg" alt="slide 2" />
-                    </CCarouselItem>
-                    <CCarouselItem>
-                        <img class="d-block w-100" src="../assets/img/html5.svg" alt="slide 3" />
-                    </CCarouselItem>
-                </CCarousel>
-            </div> -->
+
         </scroll-page>
         <scroll-page id="page-3">
             <h1 class="titulos">TODOS OS PROJETOS</h1>
@@ -206,27 +189,36 @@ export default {
     </scroll-container>
 </template>
 <style>
-#my-scrollbar {
-    width: 500px;
-    height: 500px;
-    overflow: auto;
-}
-
 #page-1 {
     background-color: rgb(240, 235, 239);
     height: 100%;
     display: grid;
-    grid-template-rows: 100px 100%;
+    grid-template-rows: 10% 90%;
     grid-template-columns: 100%
+}
+
+.subtitulo {
+    font-size: 24px;
+    text-align: center;
+    font-weight: 600;
 }
 
 .containerPage1 {
     width: 100%;
-    height: calc(100% - 150px);
+    height: 100%;
     display: grid;
-    grid-template-columns: 33% 33% 33%;
     padding: 0px 20px;
+    grid-template-columns: 50% 50%;
+    grid-template-rows: 60% 40%;
     justify-content: center;
+}
+
+.blocosSkills {
+    height: 100%;
+    display: block;
+    align-items: center;
+    justify-content: center;
+    margin: auto;
 }
 
 .lista li::marker {
@@ -273,6 +265,12 @@ li {
     padding-bottom: 20px;
 }
 
+::-webkit-scrollbar {
+    width: 0px;
+    height: 0px;
+    overflow: hidden;
+}
+
 .container {
     width: 100%;
     height: 100%;
@@ -281,6 +279,7 @@ li {
 }
 
 scroll-container {
+    width: 100%;
     overflow-y: scroll;
     display: block;
     height: 100%;
@@ -297,7 +296,7 @@ scroll-page {
 
 .titulos {
     width: 100%;
-    margin: 20px;
+    margin: 10px;
     text-align: center;
 }
 
@@ -358,6 +357,57 @@ scroll-page {
 
 .atributos {
     font-weight: 700;
+}
+
+@media (min-width: 551px) {
+    .titulos {
+        font-size: 24px;
+        font-weight: 600;
+    }
+
+    .todosProjetos {
+        justify-content: center;
+        padding: 10px;
+        width: 100%;
+    }
+
+    .subtitulo {
+        font-size: 20px;
+        margin-bottom: 5px;
+    }
+
+    #page-1 {
+        grid-template-rows: 7% 93%;
+    }
+
+    #page-1 canvas {
+        margin: auto;
+        height: 88%;
+        width: 90%;
+    }
+}
+
+@media (max-width: 550px) {
+    .titulos {
+        font-size: 18px;
+        font-weight: 600;
+    }
+
+    .subtitulo {
+        font-size: 16px;
+        margin-bottom: 5px;
+    }
+
+    .divFramework img {
+        width: 30px;
+        height: 30px;
+    }
+
+    .todosProjetos {
+        justify-content: center;
+        padding: 10px;
+        width: 100%;
+    }
 }
 </style>
 

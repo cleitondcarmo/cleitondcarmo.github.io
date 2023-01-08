@@ -54,7 +54,7 @@ body {
 }
 
 .about {
-  width: 100vw;
+  width: 100%;
   display: flex;
   flex-direction: row;
   justify-content: center;
@@ -62,7 +62,7 @@ body {
 }
 
 .containerAbout {
-  width: 800px;
+  width: 720px;
   height: 390px;
   display: flex;
   margin: 20px;

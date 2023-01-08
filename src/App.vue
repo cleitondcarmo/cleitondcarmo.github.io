@@ -88,6 +88,11 @@ import { CDropdown, CDropdownItem, CDropdownMenu, CDropdownToggle, CButton } fro
 </template>
 
 <style scoped>
+#app{
+  max-width: 100%;
+  max-height: 100%;
+}
+
 #iHome,
 #iAbout,
 #iContact,
@@ -202,7 +207,6 @@ import { CDropdown, CDropdownItem, CDropdownMenu, CDropdownToggle, CButton } fro
     grid-column-start: 2;
     grid-column-end: 3;
     margin: auto;
-    padding-bottom: 30px;
   }
 
   body {
