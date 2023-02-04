@@ -109,7 +109,8 @@ import { CDropdown, CDropdownItem, CDropdownMenu, CDropdownToggle, CButton } fro
 
 #Contact:hover #iContact,
 #About:hover #iAbout,
-#Home:hover #iHome {
+#Home:hover #iHome, 
+#Projects:hover #iProjects {
   color: #008000;
 }
 

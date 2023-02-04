@@ -95,77 +95,86 @@ export default {
             <div>
                 <h1 class="titulos">HABILIDADES</h1>
             </div>
-            <div class="containerPage1">
-                <div class="blocosSkills" style="text-align: center;">
-                    <p class="subtitulo">Conhecimento</p>
-                    <Radar :data="data" :options="options" />
-                </div>
-                <div class="blocosSkills" style="width: 300px;">
-                    <div class="lista">
-                        <p class="subtitulo">Soft Skills</p>
-                        <ul>
-                            <li>Empatia</li>
-                            <li>Comunicação</li>
-                            <li>Perseverança</li>
-                            <li>Flexibilidade</li>
-                            <li>Autodidata</li>
-                            <li>Organização</li>
-                        </ul>
-                    </div>
-                </div>
-                <div class="blocosSkills" style="text-align: center;">
-                    <div>
-                        <p class="subtitulo">Experiência</p>
-                        <div style="display: flex; flex-wrap: wrap;  justify-content: center; text-align: center;">
-                            <div class="divFramework">
-                                <img src="../assets/img/vue.svg" alt="Vue">
-                                <p>VueJs</p>
+            <div>
+                <scroll-container>
+                    <scroll-page>
+                        <div class="containerPage1">
+                            <div class="blocosSkills" style="text-align: center;">
+                                <p class="subtitulo">Conhecimento</p>
+                                <Radar :data="data" :options="options" />
                             </div>
-                            <div class="divFramework">
-                                <img src="../assets/img/quasar.svg" alt="quasar">
-                                <p>Quasar</p>
+                            <div class="blocosSkills" style="width: 300px;">
+                                <div class="lista">
+                                    <p class="subtitulo">Soft Skills</p>
+                                    <ul>
+                                        <li>Empatia</li>
+                                        <li>Comunicação</li>
+                                        <li>Perseverança</li>
+                                        <li>Flexibilidade</li>
+                                        <li>Autodidata</li>
+                                        <li>Organização</li>
+                                    </ul>
+                                </div>
                             </div>
-                            <div class="divFramework">
-                                <img src="../assets/img/javascript.svg" alt="javascript">
-                                <p>Javascript</p>
+                            <div class="blocosSkills" style="text-align: center;">
+                                <div>
+                                    <p class="subtitulo">Experiência</p>
+                                    <div
+                                        style="display: flex; flex-wrap: wrap;  justify-content: center; text-align: center;">
+                                        <div class="divFramework">
+                                            <img src="../assets/img/vue.svg" alt="Vue">
+                                            <p>VueJs</p>
+                                        </div>
+                                        <div class="divFramework">
+                                            <img src="../assets/img/quasar.svg" alt="quasar">
+                                            <p>Quasar</p>
+                                        </div>
+                                        <div class="divFramework">
+                                            <img src="../assets/img/javascript.svg" alt="javascript">
+                                            <p>Javascript</p>
+                                        </div>
+                                        <div class="divFramework">
+                                            <img src="../assets/img/node.svg" alt="Node">
+                                            <p>NodeJs</p>
+                                        </div>
+                                        <div class="divFramework">
+                                            <img src="../assets/img/css3.svg" alt="css">
+                                            <p>CSS3</p>
+                                        </div>
+                                        <div class="divFramework">
+                                            <img src="../assets/img/html5.svg" alt="html">
+                                            <p>HTML5</p>
+                                        </div>
+                                    </div>
+                                </div>
                             </div>
-                            <div class="divFramework">
-                                <img src="../assets/img/node.svg" alt="Node">
-                                <p>NodeJs</p>
-                            </div>
-                            <div class="divFramework">
-                                <img src="../assets/img/css3.svg" alt="css">
-                                <p>CSS3</p>
-                            </div>
-                            <div class="divFramework">
-                                <img src="../assets/img/html5.svg" alt="html">
-                                <p>HTML5</p>
+                            <div class="blocosSkills" style="">
+                                <p class="subtitulo">Frameworks & Bibliotecas</p>
+                                <div style="display: flex; justify-content: space-around;">
+                                    <div class="divFramework">
+                                        <img src="../assets/img/vue.svg" alt="Vue">
+                                        <p>VueJs</p>
+                                    </div>
+                                    <div class="divFramework">
+                                        <img src="../assets/img/react.svg" alt="Vue">
+                                        <p>React</p>
+                                    </div>
+                                    <div class="divFramework">
+                                        <img src="../assets/img/laravel.svg" alt="Vue">
+                                        <p>Laravel</p>
+                                    </div>
+                                </div>
                             </div>
                         </div>
-                    </div>
-                </div>
-                <div class="blocosSkills" style="">
-                    <p class="subtitulo">Frameworks & Bibliotecas</p>
-                    <div style="display: flex; justify-content: space-around;">
-                        <div class="divFramework">
-                            <img src="../assets/img/vue.svg" alt="Vue">
-                            <p>VueJs</p>
-                        </div>
-                        <div class="divFramework">
-                            <img src="../assets/img/react.svg" alt="Vue">
-                            <p>React</p>
-                        </div>
-                        <div class="divFramework">
-                            <img src="../assets/img/laravel.svg" alt="Vue">
-                            <p>Laravel</p>
-                        </div>
-                    </div>
-                </div>
+                    </scroll-page>
+                </scroll-container>
             </div>
         </scroll-page>
+
         <scroll-page id="page-2">
 
         </scroll-page>
+
         <scroll-page id="page-3">
             <h1 class="titulos">TODOS OS PROJETOS</h1>
             <scroll-container>
