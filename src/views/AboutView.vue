@@ -13,7 +13,7 @@ import { CButton } from '@coreui/vue';
       </div>
       <div class="descricao">
         <div>
-          <h1>Sobre mim</h1>
+          <h1 class="aboutStyle">Sobre mim</h1>
           <p>
             Eu me chamo Cleiton Aparecido Do Carmo Silva. Sou graduado em Análise e Desenvolvimento de Sistemas pelo
             Instituto Federal
@@ -51,6 +51,40 @@ body {
   background-repeat: no-repeat;
   margin: 0px;
   padding: 0px;
+}
+
+.aboutStyle{
+    width: 100%;
+    text-align: start;
+    color: rgb(253, 253, 253);
+    animation: flicker 1.5s infinite alternate;
+    padding: 0px;
+}
+
+@keyframes flicker {
+    0%,
+    18%,
+    22%,
+    25%,
+    53%,
+    57%,
+    100% {
+        text-shadow:
+            0 0 0px #fff,
+            0 0 5px #fff,
+            0 0 10px #fff,
+            0 0 15px green,
+            0 0 20px green,
+            0 0 25px green,
+            0 0 30px green,
+            0 0 35px green;
+    }
+
+    20%,
+    24%,
+    55% {
+        text-shadow: none;
+    }
 }
 
 .about {

@@ -84,10 +84,37 @@ body {
 }
 
 .contactMeh1 {
-  font-size: 40px;
-  color: green;
-  font-family: FreeMono, monospace;
-  font-weight: 700;
+    width: 100%;
+    text-align: start;
+    color: rgb(253, 253, 253);
+    animation: flicker 1.5s infinite alternate;
+    padding: 10px;
+}
+
+@keyframes flicker {
+    0%,
+    18%,
+    22%,
+    25%,
+    53%,
+    57%,
+    100% {
+        text-shadow:
+            0 0 0px #fff,
+            0 0 5px #fff,
+            0 0 10px #fff,
+            0 0 15px green,
+            0 0 20px green,
+            0 0 25px green,
+            0 0 30px green,
+            0 0 35px green;
+    }
+
+    20%,
+    24%,
+    55% {
+        text-shadow: none;
+    }
 }
 
 .imgPerfil {
