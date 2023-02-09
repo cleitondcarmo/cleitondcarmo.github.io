@@ -220,15 +220,14 @@ import { CDropdown, CDropdownItem, CDropdownMenu, CDropdownToggle, CButton } fro
 @media (max-width: 800px) {
   .app {
     display: grid;
-    grid-template-rows: 80px 600px;
+    grid-template-rows: 60px calc(100% - 60px) !important;
   }
 
   header {
     grid-row-start: 1;
     grid-row-end: 2;
     background-color: black;
-    display: grid;
-    grid-template-columns: 80px calc(100% - 100px);
+    display: flex;
   }
 
   .routersLink {
@@ -237,14 +236,14 @@ import { CDropdown, CDropdownItem, CDropdownMenu, CDropdownToggle, CButton } fro
   }
 
   .divLogo {
-    width: 70px;
-    height: 70px;
+    width: 50px;
+    height: 50px;
     margin: 5px;
   }
 
   .logo {
-    width: 70px;
-    height: 70px;
+    width: 50px;
+    height: 50px;
   }
 
   .divNav {
@@ -263,7 +262,7 @@ import { CDropdown, CDropdownItem, CDropdownMenu, CDropdownToggle, CButton } fro
     display: flex;
     justify-content: center;
     width: 50px;
-    height: 80px;
+    height: 60px;
   }
 
   .divMost {
@@ -282,7 +281,8 @@ import { CDropdown, CDropdownItem, CDropdownMenu, CDropdownToggle, CButton } fro
   .divMenu img {
     width: 50px;
     height: 50px;
-    margin: 15px 0px
+    margin: auto;
+    padding: auto;
   }
 
   .dropdown-toggle::after {
@@ -297,6 +297,13 @@ import { CDropdown, CDropdownItem, CDropdownMenu, CDropdownToggle, CButton } fro
 
   .divMenu a {
     color: green;
+    height: 100%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+  }
+  .dropdown-menu, .show{
+    min-width: 50px !important;
   }
 }
 </style>

@@ -90,7 +90,7 @@ export default {
 
 <template>
     <scroll-container>
-        <div class="div" style="position: fixed; right: 20px; top: 45%; display: grid;">
+        <div class="displayPage" style="position: fixed; right: 20px; top: 45%; display: grid;">
             <a class="linkpage" href="#page-1">
                 1
             </a>
@@ -102,7 +102,7 @@ export default {
             </a>
         </div>
         <scroll-page id="page-1">
-            <div>
+            <div class="titulosH1">
                 <h1 class="titulos">HABILIDADES</h1>
             </div>
             <div style="height: calc(100% - 30px);">
@@ -111,8 +111,8 @@ export default {
                         <div class="containerPage1">
                             <div class="blocosSkills" style="text-align: center">
                                 <p class="subtitulo">Conhecimento</p>
-                                <div
-                                    style="text-align: center; background-color: aliceblue; width: 340px; height: 340px; border-radius: 350px; padding: 20px 10px 10px 10px; border: 2px solid green;">
+                                <div class="divCanvas"
+                                    style="">
                                     <Radar :data="data" :options="options" />
                                 </div>
                             </div>
@@ -207,11 +207,11 @@ export default {
                                 </div>
                                 <div class="divAboutProject">
                                     <div class="imgProject">
-                                        <div style="margin: 10px 20px 10px 10px;">
+                                        <div class="divImgMeny" style="margin: 20px;">
                                             <img class="imgPrincipalProject" src="../assets/img/project-meny-img_1.jpeg"
                                                 alt="Imagem 1 projeto Meny">
                                         </div>
-                                        <div style="margin: 10px 20px 10px 10px;">
+                                        <div class="divImgMeny" style="margin: 20px;">
                                             <img class="imgPrincipalProject" src="../assets/img/project-meny-img_2.jpeg"
                                                 alt="Imagem 2 projeto Meny">
                                         </div>
@@ -248,7 +248,7 @@ export default {
                                 </div>
                                 <div class="divAboutProject">
                                     <div class="imgProject">
-                                        <div style="margin: 10px 20px 10px 10px;">
+                                        <div class="divImgPrincipais">
                                             <img style="width: 100%; height: 280px;" src="../assets/img/project-cpc-img_1.jpeg"
                                                 alt="Imagem 1 projeto Meny">
                                         </div>
@@ -267,9 +267,9 @@ export default {
                                             <p>
                                                 O “CPC” (Cálculo de Preços para Churros) é uma aplicação com o objetivo de indicar a estimativa de 
                                                 custo de produção e do valor ideal de venda de Churros.
-                                                O “CPC” calcula a mão de obra, ingredientes, encargos e lucro escolhido pelo usuário. O projeto 
+                                                CPC calcula a mão de obra, ingredientes, encargos e lucro escolhido pelo usuário. Este projeto 
                                                 foi desenvolvido durante a disciplina de Programas Orientados a Objetos no Instituto Federal Baiano
-                                                e obteve nota 9/10.
+                                                e obteve a nota 9/10.
                                             </p>
                                         </div>
                                     </div>
@@ -286,7 +286,7 @@ export default {
                                 </div>
                                 <div class="divAboutProject">
                                     <div class="imgProject">
-                                        <div style="margin: 10px 20px 10px 10px;">
+                                        <div class="divImgPrincipais">
                                             <img style="width: 100%; height: 280px;" src="../assets/img/project-web2-img_1.jpeg"
                                                 alt="Imagem 1 projeto Web 2">
                                         </div>
@@ -341,6 +341,10 @@ export default {
     </scroll-container>
 </template>
 <style>
+body{
+    max-width: 100% !important;
+    min-width: 100% !important;
+}
 
 .linkpage{
     text-decoration: none;
@@ -353,12 +357,18 @@ export default {
     border: 1px solid red;
 }
 
+.linkpage:hover{
+    text-decoration: none;
+    color: green;
+    background-color: #fff;
+}
+
 .titulos {
-    width: 100%;
+    width: 100% !important;
     text-align: center;
     color: rgb(253, 253, 253);
     animation: flicker 1.5s infinite alternate;
-    padding: 10px;
+    font-size: 25px;
 }
 
 @keyframes flicker {
@@ -396,6 +406,11 @@ export default {
     display: flex;
 }
 
+.titulosH1{
+    width: 100%;
+    padding: 10px 0px;
+}
+
 .subtitulo {
     font-size: 24px;
     text-align: center;
@@ -420,22 +435,35 @@ export default {
 #page-1 {
     background-image: url(../assets/img/background6.jpeg);
     height: 100%;
-    display: grid;
-    grid-template-rows: 10% 90%;
-    grid-template-columns: 100%;
     border-bottom: 3px solid rgb(255, 0, 0);
-    padding-top: 10px;
 }
-
 
 .containerPage1 {
     width: 100%;
     height: 100%;
     display: grid;
-    padding: 0px 20px;
     grid-template-columns: 50% 50%;
-    grid-template-rows: 60% 40%;
+    grid-template-rows: 50% 50%;
     justify-content: center;
+}
+
+canvas {
+    display: inline !important;
+    height: 250px !important;
+    width: 250px !important;
+    align-items: center;
+    justify-content: center;
+    margin: 0px;
+    padding: 0px;
+}
+
+.divCanvas{
+    text-align: center; 
+    background-color: aliceblue; 
+    width: 310px; height: 310px; 
+    border-radius: 350px; 
+    padding: 20px 10px 10px 10px; 
+    border: 2px solid green;
 }
 
 .blocosSkills {
@@ -482,7 +510,7 @@ li {
 #page-2 {
     background-image: url(../assets/img/background6.jpeg);
     border-bottom: 3px solid rgb(255, 0, 0);
-    padding: 20px;
+    padding: 10px;
 }
 
 .divPrincipalProject {
@@ -493,6 +521,10 @@ li {
     align-items: center;
     justify-items: center;
     margin: 0px 40px;
+}
+
+.divImgPrincipais{
+    margin:10px;
 }
 
 .principalProject {
@@ -519,7 +551,7 @@ li {
 
 .imgPrincipalProject {
     width: 235px;
-    height: 280px;
+    height: 100%;
 }
 
 .descProject {
@@ -546,8 +578,6 @@ li {
     background-image: url(../assets/img/background6.jpeg);
     width: 100%;
     display: grid;
-    padding-bottom: 20px;
-    padding-top: 10px;
 }
 
 ::-webkit-scrollbar {
@@ -640,74 +670,250 @@ scroll-page {
     background-color: green;
 }
 
-canvas {
-    display: inline !important;
-    height: 280px !important;
-    width: 280px !important;
-    align-items: center;
-    justify-content: center;
-    margin: 0px;
-    padding: 0px;
-}
 
-@media (min-width: 551px) {
-    .titulos {
-        font-size: 24px;
-        font-weight: 600;
+@media (max-width: 300px) {
+    .titulos{
+        font-size: 16px !important;
     }
-
-    .todosProjetos {
-        justify-content: center;
-        padding: 10px;
-        width: 100%;
+    canvas{
+        width: 250px !important;
+        height: 250px !important;
+        font-size: 10px !important;
     }
-
-    .subtitulo {
-        font-size: 20px;
-        margin-bottom: 5px;
+    .divCanvas{
+        border-radius: 20% !important;
+        width: 270px !important;
+        height: 280px !important;
     }
-
-    #page-1 {
-        grid-template-rows: 7% 93%;
+    .divFramework {
+        font-size: 10px !important;
     }
-
-    #page-1 canvas {
-        margin: auto;
-        height: 88%;
-        width: 90%;
+    .divFramework img{
+        width: 20px !important;
+        height: 20px !important; 
+    }
+    .descProject2{
+        font-size: 10px !important;
     }
 }
 
-@media (max-width: 550px) {
-    .titulos {
-        font-size: 18px;
-        font-weight: 600;
+@media (max-width: 399px) {
+    .titulos{
+        font-size: large;
     }
-
-    .subtitulo {
-        font-size: 16px;
-        margin-bottom: 5px;
-    }
-
-    .divFramework img {
-        width: 30px;
-        height: 30px;
-    }
-
-    .todosProjetos {
-        justify-content: center;
-        padding: 10px;
-        width: 100%;
-    }
-}
-
-@media (max-width: 720px) {
     .containerPage1 {
+        width: 100%;
         height: auto;
         display: flex;
         flex-wrap: wrap;
-        padding: 20px;
+    }
+    #page-2{
+        padding: 10px 0px;
+    }
+    .blocosSkills{
+        margin-bottom:20px !important; 
+        margin-top: 0px !important;
+    }
+    .divFramework img{
+        width: 30px;
+        height: 30px; 
+    }
+
+    .divFramework {
+        font-size: 12px;
+    }
+
+    .displayPage{
+        display: none !important;
+    }
+    .divPrincipalProject{
+        margin: auto;
+        width: calc(100% - 4px);
+    }
+    .principalProject{
+        width: 100%;
+        margin: 10px 0px;
+        padding: 4px;
+    }
+    .descProject{
+        width: 100% !important;
+        display: grid;
+        grid-template-columns: 50% 50%;
+    }
+    .descProject2{
+        font-size: 12px;
+        margin: 0px;
+        padding: 4px;
+        width: 100%;
+    }
+    .divTitulo, .divAboutProject{
+        max-width: calc(100% - 8px) !important;
+        min-width: calc(100% - 8px) !important;
+        margin: 0px 4px;
+    }
+    .imgProject{
+        width: 100%;
+        height: 200px;
+        margin: auto;
+        justify-content: center;
+    }
+    .divImgPrincipais img, .divImgMeny img{
+        height: 100% !important;
+    }
+    .divImgMeny{
+        margin: 4px !important;
+    }
+    .imgPrincipalProject{
+        min-width: 100%;
+        max-width: 100%;
+    }
+    .todosProjetos{
+        margin: 4px;
+        width: calc(100% - 8px);
+        padding: 0px;
+        justify-content: center;
+        font-size: 12px;
+    }
+    .divProjeto{
+        width: 150px;
     }
 }
+
+@media (min-width: 400px) and (max-width: 619px) {
+    .titulos{
+        font-size: 20px;
+    }
+    .containerPage1 {
+        width: 100%;
+        height: auto;
+        display: flex;
+        flex-wrap: wrap;
+    }
+    #page-2{
+        padding: 10px 0px;
+    }
+    .blocosSkills{
+        margin: 40px !important; 
+    }
+    .divFramework img{
+        width: 30px;
+        height: 30px; 
+    }
+    .divFramework {
+        font-size: 14px;
+    }
+    .displayPage{
+        display: none !important;
+    }
+    .divPrincipalProject{
+        margin: auto;
+        width: calc(100% - 4px);
+    }
+    .principalProject{
+        width: 100%;
+        margin: 10px 0px;
+        padding: 4px;
+    }
+    .descProject{
+        width: 100% !important;
+        display: grid;
+        grid-template-columns: 50% 50%;
+    }
+    .descProject2{
+        font-size: 14px;
+        margin: 0px;
+        padding: 4px;
+        width: 100%;
+    }
+    .divTitulo, .divAboutProject{
+        max-width: calc(100% - 8px) !important;
+        min-width: calc(100% - 8px) !important;
+        margin: 0px 4px;
+    }
+    .imgProject{
+        width: 100%;
+        margin: auto;
+        justify-content: center;
+    }
+    .divImgMeny{
+        margin: 4px !important;
+    }
+    .imgPrincipalProject{
+        min-width: 100%;
+        max-width: 100%;
+    }
+    .todosProjetos{
+        margin: 4px;
+        width: calc(100% - 8px);
+        padding: 0px;
+        justify-content: center;
+        font-size: 14px;
+    }
+    .divProjeto{
+        width: 170px;
+    }
+}
+
+@media (min-width: 620px) and (max-width: 800px) {
+    .titulos{
+        font-size: 25px;
+    }
+    .containerPage1 {
+        width: 100%;
+        height: auto;
+        display: flex;
+        flex-wrap: wrap;
+    }
+    .blocosSkills{
+        margin: 20px !important; 
+    }
+    .titulos{
+        width: 100% !important;
+    }
+    .displayPage{
+        display: none !important;
+    }
+    .divPrincipalProject{
+        margin: auto;
+        width: calc(100% - 10px);
+    }
+    .principalProject{
+        width: 100%;
+        margin: 10px 0px;
+        padding: 10px;
+    }
+    .divAboutProject{
+        width: 100%;
+    }
+    .descProject{
+        margin: auto;
+    }
+    .descProject2{
+        margin: 5px;
+    }
+    .imgProject{
+        width: 100%;
+        margin: auto;
+        justify-content: center;
+    }
+    .divImgPrincipais{
+        margin: auto;
+    }
+    .todosProjetos{
+        margin: 5px;
+        width: calc(100% - 10px);
+        padding: 0px;
+        justify-content: center;
+    }
+}
+
+@media (min-width: 801px){
+    .titulos{
+        padding: 10px;
+    }
+    .blocosSkills{
+    }
+}
+
 </style>
 
