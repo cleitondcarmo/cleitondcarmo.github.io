@@ -438,6 +438,7 @@ body{
     background-image: url(../assets/img/background6.jpeg);
     height: 100%;
     border-bottom: 3px solid rgb(255, 0, 0);
+    padding-bottom: 20px;
 }
 
 .containerPage1 {
@@ -512,7 +513,7 @@ li {
 #page-2 {
     background-image: url(../assets/img/background6.jpeg);
     border-bottom: 3px solid rgb(255, 0, 0);
-    padding: 10px;
+    padding-bottom: 30px;
 }
 
 .divPrincipalProject {
@@ -580,6 +581,7 @@ li {
     background-image: url(../assets/img/background6.jpeg);
     width: 100%;
     display: grid;
+    padding-bottom: 30px;
 }
 
 ::-webkit-scrollbar {

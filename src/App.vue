@@ -279,8 +279,8 @@ import { CDropdown, CDropdownItem, CDropdownMenu, CDropdownToggle, CButton } fro
   }
 
   .divMenu img {
-    width: 50px;
-    height: 50px;
+    width: 30px;
+    height: 30px;
     margin: auto;
     padding: auto;
   }

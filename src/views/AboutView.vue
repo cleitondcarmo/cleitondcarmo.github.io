@@ -231,5 +231,8 @@ body {
     padding: 0px 10px;
     width: 100%;
   }
+  .aboutStyle{
+    text-align: center !important;
+  }
 }
 </style>

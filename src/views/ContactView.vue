@@ -268,10 +268,15 @@ body {
 
   .contactText {
     width: 100%;
+    margin-bottom: 0px;
+    margin-top: 20px;
   }
 
   .perfil {
     margin: 20px 5px;
+  }
+  .contactMeh1 {
+    text-align: center;
   }
 }
 </style>

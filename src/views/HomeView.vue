@@ -46,7 +46,7 @@
 .h1Tree {
   font-family: cursive;
   font-size: 30px;
-  text-shadow: 3px 3px green;
+  text-shadow: 1px 1px green;
 }
 
 .painel,
