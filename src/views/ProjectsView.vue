@@ -189,7 +189,7 @@ export default {
         </scroll-page>
 
         <scroll-page id="page-2">
-            <div>
+            <div class="titulosH1">
                 <h1 class="titulos">PRINCIPAIS PROJETOS</h1>
             </div>
             <div style="height: calc(100% - 60px);">
@@ -319,7 +319,9 @@ export default {
         </scroll-page>
 
         <scroll-page id="page-3">
-            <h1 class="titulos">TODOS PROJETOS</h1>
+            <div class="titulosH1">
+                <h1 class="titulos">TODOS PROJETOS</h1>
+            </div>
             <scroll-container>
                 <scroll-page>
                     <div class="todosProjetos">
@@ -770,12 +772,15 @@ scroll-page {
     .todosProjetos{
         margin: 4px;
         width: calc(100% - 8px);
-        padding: 0px;
+        padding: 0px 0px 20px 0px;
         justify-content: center;
         font-size: 12px;
     }
     .divProjeto{
         width: 150px;
+    }
+    #page-3{
+        padding: 0px 0px 20px 0px;
     }
 }
 
