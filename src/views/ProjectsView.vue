@@ -91,13 +91,13 @@ export default {
 <template>
     <scroll-container>
         <div class="displayPage" style="position: fixed; right: 20px; top: 45%; display: grid;">
-            <a class="linkpage" href="/projects/#page-1">
+            <a class="linkpage" href="/projects/page-1">
                 1
             </a>
-            <a class="linkpage" href="projects/#page-2">
+            <a class="linkpage" href="page-2">
                 2
             </a>
-            <a class="linkpage" href="https://cleitondcarmo.github.io/#/projects/#page-3">
+            <a class="linkpage" href="https://cleitondcarmo.github.io/projects/#page-3">
                 3
             </a>
         </div>
