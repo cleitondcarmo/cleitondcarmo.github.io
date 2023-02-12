@@ -1067,8 +1067,6 @@ scroll-page {
 }
 
 @media (min-width: 1269px) {
-    .imgProject {}
-
     .divImgMeny {
         margin: 18px !important;
     }
