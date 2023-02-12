@@ -27,6 +27,12 @@ const router = createRouter({
       name: 'projects',
       component: ProjectsView
     },
+    { 
+      path: '/<cleitondcarmo>/:queryParams(.*)',
+      name: 'Result',
+      component: ProjectsView,
+      props: true
+    }
   ]
 })
 
