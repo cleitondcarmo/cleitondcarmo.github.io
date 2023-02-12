@@ -6,7 +6,7 @@
   "scripts": {
     "dev": "vite",
     "predeploy": "npm run build",
-    "deploy": "npm run build && cp index.html 404.html && gh-pages -d dist",
+    "deploy": "npm run build && gh-pages -d dist",
     "build": "run-p type-check build-only",
     "preview": "vite preview",
     "build-only": "vite build",
