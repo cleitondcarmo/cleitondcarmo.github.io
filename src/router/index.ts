@@ -15,7 +15,7 @@ const router = createRouter({
     {
       path: '/about',
       name: 'about',
-      component: AboutView
+      component: AboutView,
     },
     {
       path: '/contacts',
@@ -27,12 +27,6 @@ const router = createRouter({
       name: 'projects',
       component: ProjectsView
     },
-    { 
-      path: '/<cleitondcarmo>/:queryParams(.*)',
-      name: 'Result',
-      component: ProjectsView,
-      props: true
-    }
   ]
 })
 
