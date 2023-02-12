@@ -142,6 +142,7 @@ body {
 .negrito {
   font-weight: 700;
   font-size: 14px;
+  color: greenyellow;
 }
 
 .infoDiv {

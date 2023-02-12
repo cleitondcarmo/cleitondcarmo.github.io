@@ -111,8 +111,7 @@ export default {
                         <div class="containerPage1">
                             <div class="blocosSkills" style="text-align: center">
                                 <p class="subtitulo">Conhecimento</p>
-                                <div class="divCanvas"
-                                    style="">
+                                <div class="divCanvas" style="">
                                     <Radar :data="data" :options="options" />
                                 </div>
                             </div>
@@ -133,7 +132,7 @@ export default {
                                     </ul>
                                 </div>
                             </div>
-                            <div class="blocosSkills" style="text-align: center; margin-top: 70px;  height: 135px;">
+                            <div class="blocosSkills" style="text-align: center; margin-top: 100px;  height: 135px;">
                                 <div>
                                     <p class="subtitulo">Experiência</p>
                                     <div
@@ -151,10 +150,6 @@ export default {
                                             <p>Javascript</p>
                                         </div>
                                         <div class="divFramework">
-                                            <img src="../assets/img/node.svg" alt="Node">
-                                            <p>NodeJs</p>
-                                        </div>
-                                        <div class="divFramework">
                                             <img src="../assets/img/css3.svg" alt="css">
                                             <p>CSS3</p>
                                         </div>
@@ -165,7 +160,7 @@ export default {
                                     </div>
                                 </div>
                             </div>
-                            <div class="blocosSkills" style="margin-top: 70px;  height: 135px;">
+                            <div class="blocosSkills" style="margin-top: 100px;  height: 135px;">
                                 <p class="subtitulo">Frameworks & Bibliotecas</p>
                                 <div style="display: flex; justify-content: space-around;">
                                     <div class="divFramework">
@@ -202,7 +197,8 @@ export default {
                                         <p>Meny</p>
                                     </div>
                                     <div style="width: 50%;">
-                                        <a class="btnVerPrincipais" target="_blank" href="https://github.com/cleitondcarmo/Meny">Ver no Github</a>
+                                        <a class="btnVerPrincipais" target="_blank"
+                                            href="https://github.com/cleitondcarmo/Meny">Ver no Github</a>
                                     </div>
                                 </div>
                                 <div class="divAboutProject">
@@ -228,10 +224,13 @@ export default {
                                         </div>
                                         <div class="descProject2">
                                             <p>
-                                                O projeto Meny se trata de uma aplicação voltada para o ramo de refeição, que torna possivel 
-                                                os usuarios terem perfis de empresa e cliente, negociando entre si, como um delivery. 
-                                                Meny foi desenvolvido durante a disciplina de Dispositivos Moveis no Instituto Federal Baiano - Campus Guanambi 
-                                                e obteve a nota máxima.  
+                                                O projeto Meny se trata de uma aplicação voltada para o ramo de
+                                                refeição, que torna possível
+                                                os usuários terem perfis de empresa e cliente, negociando entre si, como
+                                                um delivery.
+                                                Meny foi desenvolvido durante a disciplina de Dispositivos Moveis no
+                                                Instituto Federal Baiano - Campus Guanambi
+                                                e obteve a nota máxima.
                                             </p>
                                         </div>
                                     </div>
@@ -243,14 +242,16 @@ export default {
                                         <p>CPC</p>
                                     </div>
                                     <div style="width: 50%;">
-                                        <a class="btnVerPrincipais" target="_blank" href="https://github.com/cleitondcarmo/Calculadora-de-precos-para-churros">Ver no Github</a>
+                                        <a class="btnVerPrincipais" target="_blank"
+                                            href="https://github.com/cleitondcarmo/Calculadora-de-precos-para-churros">Ver
+                                            no Github</a>
                                     </div>
                                 </div>
                                 <div class="divAboutProject">
                                     <div class="imgProject">
                                         <div class="divImgPrincipais">
-                                            <img style="width: 100%; height: 280px;" src="../assets/img/project-cpc-img_1.jpeg"
-                                                alt="Imagem 1 projeto Meny">
+                                            <img style="width: 100%; height: 280px;"
+                                                src="../assets/img/project-cpc-img_1.jpeg" alt="Imagem 1 projeto Meny">
                                         </div>
                                     </div>
                                     <div class="descProject">
@@ -265,10 +266,13 @@ export default {
                                         </div>
                                         <div class="descProject2">
                                             <p>
-                                                O “CPC” (Cálculo de Preços para Churros) é uma aplicação com o objetivo de indicar a estimativa de 
+                                                O “CPC” (Cálculo de Preços para Churros) é uma aplicação com o objetivo
+                                                de indicar a estimativa de
                                                 custo de produção e do valor ideal de venda de Churros.
-                                                CPC calcula a mão de obra, ingredientes, encargos e lucro escolhido pelo usuário. Este projeto 
-                                                foi desenvolvido durante a disciplina de Programas Orientados a Objetos no Instituto Federal Baiano
+                                                CPC calcula a mão de obra, ingredientes, encargos e lucro escolhido pelo
+                                                usuário. O projeto
+                                                foi criado durante a disciplina de Programas Orientados a Objetos no
+                                                Instituto Federal Baiano
                                                 e obteve a nota 9/10.
                                             </p>
                                         </div>
@@ -281,13 +285,15 @@ export default {
                                         <p>Web2-2021.1</p>
                                     </div>
                                     <div style="width: 50%;">
-                                        <a class="btnVerPrincipais" target="_blank" href="https://github.com/cleitondcarmo/web2-2021.1">Ver no Github</a>
+                                        <a class="btnVerPrincipais" target="_blank"
+                                            href="https://github.com/cleitondcarmo/web2-2021.1">Ver no Github</a>
                                     </div>
                                 </div>
                                 <div class="divAboutProject">
                                     <div class="imgProject">
                                         <div class="divImgPrincipais">
-                                            <img style="width: 100%; height: 280px;" src="../assets/img/project-web2-img_1.jpeg"
+                                            <img style="width: 100%; height: 280px;"
+                                                src="../assets/img/project-web2-img_1.jpeg"
                                                 alt="Imagem 1 projeto Web 2">
                                         </div>
                                     </div>
@@ -303,10 +309,51 @@ export default {
                                         </div>
                                         <div class="descProject2">
                                             <p>
-                                                Web2-2021.1 é uma aplicação de gestão e comércio online, onde é possivel a compra e venda de 
-                                                produtos e atualização automatica do estoque no banco de dados.  
-                                                O sistema foi desenvolvido durante a disciplina Web 2 no Instituto Federal Baiano - Campus Guanambi 
-                                                e obteve a nota máxima.  
+                                                Web2-2021.1 é uma aplicação de gestão e comércio online, onde é possivel
+                                                a compra e venda de
+                                                produtos e atualização automática do estoque no banco de dados.
+                                                O sistema foi desenvolvido durante a disciplina Web 2 no Instituto
+                                                Federal Baiano - Campus Guanambi
+                                                e obteve a nota máxima.
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="principalProject">
+                                <div class="divTitulo">
+                                    <div style="width: 50%;">
+                                        <p>TCC</p>
+                                    </div>
+                                    <div style="width: 50%;">
+                                        <a class="btnVerPrincipais" target="_blank"
+                                            href="https://doi.org/10.29327/4164411">Ver Artigo</a>
+                                    </div>
+                                </div>
+                                <div class="divAboutProject">
+                                    <div class="imgProject">
+                                        <div class="divImgPrincipais">
+                                            <img style="width: 100% !important; height: 280px;" src="../assets/img/project-tcc-img_1.png"
+                                                alt="Imagem 1 projeto Web 2">
+                                        </div>
+                                    </div>
+                                    <div class="descProject">
+                                        <div class="descProject2">
+                                            <p><span class="atributos">Nome: </span>Acesso a utilização de tecnologia na
+                                                educação em tempos de pandemia de Covid-19</p>
+                                            <p><span class="atributos">Criado em: </span>12/2021</p>
+                                            <p><span class="atributos">Tipo: </span>Trabalho de conclusão de curso</p>
+                                            <p><span class="atributos">Banca: </span>MSc. João P. B. Glória, Dr. Naidson
+                                                C. S. Ferreira, Dra. Bárbara K. A. B. Lessa</p>
+                                            <p><span class="atributos">Doi: </span>
+                                                <a href="https://doi.org/10.29327/4164411">
+                                                    <img src="https://publicacoes.even3.com.br/badge/doi?c=10.29327/4164411">
+                                                </a>
+                                            </p>
+                                        </div>
+                                        <div class="descProject2">
+                                            <p>
+                                                Este artigo é um estudo que analisa a relação aluno-professor utilizando a tecnologia como principal ferramenta para as aulas remotas durante o distanciamento social na pandemia da Covid-19. Este estudo foi realizado durante a disciplina TCC 1 e TCC 2 no Instituto Federal Baiano - Campus Guanambi e obteve a nota 9.2.
                                             </p>
                                         </div>
                                     </div>
@@ -343,12 +390,12 @@ export default {
     </scroll-container>
 </template>
 <style>
-body{
+body {
     max-width: 100% !important;
     min-width: 100% !important;
 }
 
-.linkpage{
+.linkpage {
     text-decoration: none;
     color: white;
     width: 25px;
@@ -359,7 +406,7 @@ body{
     border: 1px solid red;
 }
 
-.linkpage:hover{
+.linkpage:hover {
     text-decoration: none;
     color: green;
     background-color: #fff;
@@ -374,6 +421,7 @@ body{
 }
 
 @keyframes flicker {
+
     0%,
     18%,
     22%,
@@ -408,7 +456,7 @@ body{
     display: flex;
 }
 
-.titulosH1{
+.titulosH1 {
     width: 100%;
     padding: 10px 0px;
 }
@@ -420,7 +468,7 @@ body{
     color: white;
 }
 
-.btnVerPrincipais{
+.btnVerPrincipais {
     float: right;
     width: 115px;
     height: 30px;
@@ -460,12 +508,13 @@ canvas {
     padding: 0px;
 }
 
-.divCanvas{
-    text-align: center; 
-    background-color: aliceblue; 
-    width: 310px; height: 310px; 
-    border-radius: 350px; 
-    padding: 20px 10px 10px 10px; 
+.divCanvas {
+    text-align: center;
+    background-color: aliceblue;
+    width: 310px;
+    height: 310px;
+    border-radius: 350px;
+    padding: 20px 10px 10px 10px;
     border: 2px solid green;
 }
 
@@ -526,8 +575,10 @@ li {
     margin: 0px 40px;
 }
 
-.divImgPrincipais{
-    margin:10px;
+.divImgPrincipais {
+    margin: 10px;
+    min-width: 100%;
+    max-width: 520px;
 }
 
 .principalProject {
@@ -569,6 +620,7 @@ li {
     width: 250px;
     height: 300px;
     margin: 10px 0px 0px 10px;
+    padding: 0px 0px 0px 10px;
 }
 
 .descProject2 p {
@@ -666,7 +718,8 @@ scroll-page {
     font-weight: 600;
 }
 
-.btnVer:hover, .btnVerPrincipais:hover {
+.btnVer:hover,
+.btnVerPrincipais:hover {
     margin: auto;
     text-decoration: none;
     color: black;
@@ -676,237 +729,292 @@ scroll-page {
 
 
 @media (max-width: 300px) {
-    .titulos{
+    .titulos {
         font-size: 16px !important;
     }
-    canvas{
+
+    canvas {
         width: 250px !important;
         height: 250px !important;
         font-size: 10px !important;
     }
-    .divCanvas{
+
+    .divCanvas {
         border-radius: 20% !important;
         width: 270px !important;
         height: 280px !important;
     }
+
     .divFramework {
         font-size: 10px !important;
     }
-    .divFramework img{
+
+    .divFramework img {
         width: 20px !important;
-        height: 20px !important; 
+        height: 20px !important;
     }
-    .descProject2{
+
+    .descProject2 {
         font-size: 10px !important;
     }
 }
 
 @media (max-width: 399px) {
-    .titulos{
+    .titulos {
         font-size: large;
     }
+
     .containerPage1 {
         width: 100%;
         height: auto;
         display: flex;
         flex-wrap: wrap;
     }
-    #page-2{
+
+    #page-2 {
         padding: 10px 0px;
     }
-    .blocosSkills{
-        margin-bottom:20px !important; 
+
+    .blocosSkills {
+        margin-bottom: 20px !important;
         margin-top: 0px !important;
     }
-    .divFramework img{
+
+    .divFramework img {
         width: 30px;
-        height: 30px; 
+        height: 30px;
     }
 
     .divFramework {
         font-size: 12px;
     }
 
-    .displayPage{
+    .displayPage {
         display: none !important;
     }
-    .divPrincipalProject{
+
+    .divPrincipalProject {
         margin: auto;
         width: calc(100% - 4px);
     }
-    .principalProject{
+
+    .principalProject {
         width: 100%;
         margin: 10px 0px;
         padding: 4px;
     }
-    .descProject{
+
+    .descProject {
         width: 100% !important;
         display: grid;
         grid-template-columns: 50% 50%;
     }
-    .descProject2{
+
+    .descProject2 {
         font-size: 12px;
         margin: 0px;
         padding: 4px;
         width: 100%;
     }
-    .divTitulo, .divAboutProject{
+
+    .divTitulo,
+    .divAboutProject {
         max-width: calc(100% - 8px) !important;
         min-width: calc(100% - 8px) !important;
         margin: 0px 4px;
     }
-    .imgProject{
+
+    .imgProject {
         width: 100%;
         height: 200px;
         margin: auto;
         justify-content: center;
     }
-    .divImgPrincipais img, .divImgMeny img{
+
+    .divImgPrincipais img,
+    .divImgMeny img {
         height: 100% !important;
     }
-    .divImgMeny{
+
+    .divImgMeny {
         margin: 4px !important;
     }
-    .imgPrincipalProject{
+
+    .imgPrincipalProject {
         min-width: 100%;
         max-width: 100%;
     }
-    .todosProjetos{
+
+    .todosProjetos {
         margin: 4px;
         width: calc(100% - 8px);
         padding: 0px 0px 20px 0px;
         justify-content: center;
         font-size: 12px;
     }
-    .divProjeto{
+
+    .divProjeto {
         width: 150px;
     }
-    #page-3{
+
+    #page-3 {
         padding: 0px 0px 20px 0px;
     }
 }
 
 @media (min-width: 400px) and (max-width: 619px) {
-    .titulos{
+    .titulos {
         font-size: 20px;
     }
+
     .containerPage1 {
         width: 100%;
         height: auto;
         display: flex;
         flex-wrap: wrap;
     }
-    #page-2{
+
+    #page-2 {
         padding: 10px 0px;
     }
-    .blocosSkills{
-        margin: 40px !important; 
+
+    .blocosSkills {
+        margin: 40px !important;
     }
-    .divFramework img{
+
+    .divFramework img {
         width: 30px;
-        height: 30px; 
+        height: 30px;
     }
+
     .divFramework {
         font-size: 14px;
     }
-    .displayPage{
+
+    .displayPage {
         display: none !important;
     }
-    .divPrincipalProject{
+
+    .divPrincipalProject {
         margin: auto;
         width: calc(100% - 4px);
     }
-    .principalProject{
+
+    .principalProject {
         width: 100%;
         margin: 10px 0px;
         padding: 4px;
     }
-    .descProject{
+
+    .descProject {
         width: 100% !important;
+        max-width: 500px;
         display: grid;
+        margin: auto;
         grid-template-columns: 50% 50%;
     }
-    .descProject2{
+
+    .descProject2 {
         font-size: 14px;
         margin: 0px;
         padding: 4px;
         width: 100%;
     }
-    .divTitulo, .divAboutProject{
+
+    .divTitulo,
+    .divAboutProject {
         max-width: calc(100% - 8px) !important;
         min-width: calc(100% - 8px) !important;
         margin: 0px 4px;
     }
-    .imgProject{
+
+    .imgProject {
         width: 100%;
         margin: auto;
         justify-content: center;
     }
-    .divImgMeny{
+
+    .divImgMeny {
         margin: 4px !important;
     }
-    .imgPrincipalProject{
+
+    .imgPrincipalProject {
         min-width: 100%;
         max-width: 100%;
     }
-    .todosProjetos{
+
+    .todosProjetos {
         margin: 4px;
         width: calc(100% - 8px);
         padding: 0px;
         justify-content: center;
         font-size: 14px;
     }
-    .divProjeto{
+
+    .divProjeto {
         width: 170px;
     }
 }
 
-@media (min-width: 620px) and (max-width: 800px) {
-    .titulos{
+@media (min-width: 620px) and (max-width: 1125px) {
+    .titulos {
         font-size: 25px;
     }
+
     .containerPage1 {
         width: 100%;
         height: auto;
         display: flex;
         flex-wrap: wrap;
     }
-    .blocosSkills{
-        margin: 20px !important; 
+
+    .blocosSkills {
+        margin: 20px !important;
     }
-    .titulos{
+
+    .titulos {
         width: 100% !important;
     }
-    .displayPage{
+
+    .displayPage {
         display: none !important;
     }
-    .divPrincipalProject{
+
+    .divPrincipalProject {
         margin: auto;
         width: calc(100% - 10px);
     }
-    .principalProject{
+
+    .principalProject {
         width: 100%;
         margin: 10px 0px;
         padding: 10px;
     }
-    .divAboutProject{
+
+    .divAboutProject {
         width: 100%;
     }
-    .descProject{
+
+    .descProject {
         margin: auto;
     }
-    .descProject2{
+
+    .descProject2 {
         margin: 5px;
     }
-    .imgProject{
+
+    .imgProject {
         width: 100%;
+        max-width: 520px;
         margin: auto;
         justify-content: center;
     }
-    .divImgPrincipais{
+
+    .divImgPrincipais {
         margin: auto;
     }
-    .todosProjetos{
+
+    .todosProjetos {
         margin: 5px;
         width: calc(100% - 10px);
         padding: 0px;
@@ -914,13 +1022,60 @@ scroll-page {
     }
 }
 
-@media (min-width: 801px){
-    .titulos{
+@media (min-width: 1126px) and (max-width: 1269px) {
+    .displayPage {
+        display: none !important;
+    }
+
+    .titulos {
         padding: 10px;
     }
-    .blocosSkills{
+
+    .divPrincipalProject {
+        margin: auto;
+        width: calc(100% - 10px);
+    }
+
+    .principalProject {
+        width: 100%;
+        margin: 10px 0px;
+        padding: 10px;
+    }
+
+    .divAboutProject {
+        width: 100%;
+    }
+
+    .descProject {
+        margin: auto;
+    }
+
+    .descProject2 {
+        margin: 5px;
+    }
+
+    .imgProject {
+        width: 100%;
+        max-width: 520px;
+        margin: auto;
+        justify-content: center;
+    }
+
+    .divImgPrincipais {
+        margin: auto;
     }
 }
 
+@media (min-width: 1269px) {
+    .imgProject {}
+
+    .divImgMeny {
+        margin: 18px !important;
+    }
+
+    .divImgPrincipais img {
+        max-width: 510px;
+    }
+}
 </style>
 

@@ -9,7 +9,9 @@ import { CDropdown, CDropdownItem, CDropdownMenu, CDropdownToggle, CButton } fro
     <header>
       <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.2/font/bootstrap-icons.css">
       <div class="divLogo">
-        <img class="logo" src="@/assets/img/logo.jpg" />
+        <RouterLink id="Home" class="btn btn-outline-secondary" to="/" style="border: none; margin: 0px; padding: 0px;">
+          <img class="logo" src="@/assets/img/logo.jpg" />
+        </RouterLink>
       </div>
       <div class="divNav">
         <div class="routersLink">

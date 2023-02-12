@@ -46,7 +46,7 @@
 .h1Tree {
   font-family: cursive;
   font-size: 30px;
-  text-shadow: 1px 1px green;
+  text-shadow: 3px 3px green;
 }
 
 .painel,
@@ -65,6 +65,13 @@
   .divBodyHome {
     display: flex;
     align-items: flex-start;
+    background-image: url(../assets/img/background6.jpg);
+  }
+
+  .h1Tree {
+    font-family: cursive;
+    font-size: 30px;
+    text-shadow: 1px 1px green;
   }
 
   .nome {
