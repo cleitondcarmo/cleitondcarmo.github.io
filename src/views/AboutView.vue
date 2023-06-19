@@ -23,18 +23,18 @@ import { CButton } from '@coreui/vue';
         <div class="infoDiv">
           <div class="infoSubDiv">
             <p><span class="negrito">Nome:</span> Cleiton</p>
-            <p><span class="negrito">Endereço:</span> Urandi - BA</p>
+            <p><span class="negrito">Endereço:</span> São José Do Rio Preto</p>
             <p><span class="negrito">Naturalidade:</span> São Bernardo - SP</p>
             <p><span class="negrito">Data de Nasc.:</span> 28/06/1995</p>
           </div>
           <div class="infoSubDiv">
-            <p><span class="negrito">Experiência:</span> 8 meses</p>
+            <p><span class="negrito">Desenvolvedor desde:</span> 03/2021</p>
             <p><span class="negrito">Primeira linguagem:</span> C</p>
             <p><span class="negrito">Linguagem favorita:</span> Javascript</p>
             <p><span class="negrito">Área mais desenvolvida:</span> Front-End</p>
           </div>
         </div>
-        <CButton class="btn btn-danger buttonPDF" component="a" color="primary" target="_blank" href="https://drive.google.com/file/d/1rKRyXEmOa4c97nTRRBmaIWzF3-gvmp-t/view?usp=sharing" role="button">
+        <CButton class="btn btn-danger buttonPDF" component="a" color="primary" target="_blank" href="https://drive.google.com/file/d/1NSQJcT8VvD64HmKcdf004isWGG1SCUCL/view" role="button">
           <i class="bi bi-eye"></i>
             Currículo
         </CButton>
@@ -96,11 +96,12 @@ body {
 }
 
 .containerAbout {
-  width: 720px;
+  width: 100%;
   height: 390px;
   display: flex;
   margin: 20px;
   transform: translate(-0%);
+  justify-content: center;
 }
 
 .divfoto {
@@ -118,7 +119,7 @@ body {
 }
 
 .descricao {
-  width: 450px;
+  max-width: 550px;
   height: 320px;
   padding: 35px 0px;
   text-align: justify;
@@ -179,7 +180,7 @@ body {
   margin-top: 10px;
 }
 
-@media (max-width: 800px) {
+@media (max-width: 820px) {
   body {
     height: 850px;
   }
@@ -208,7 +209,7 @@ body {
   }
 }
 
-@media (max-width: 550px) {
+@media (max-width: 820px) {
   body {
     height: 900px;
   }
