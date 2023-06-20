@@ -7,6 +7,9 @@
     "lib": ["dom", "es2018"],
     "noImplicitAny": false,
     "removeComments": false,
+    "importsNotUsedAsValues": "remove",
+    "preserveValueImports": false,
+    "verbatimModuleSyntax": true,
     "paths": {
       "@/*": ["./src/*"]
     }
