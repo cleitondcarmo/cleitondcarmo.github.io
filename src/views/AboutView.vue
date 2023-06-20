@@ -47,8 +47,7 @@ import { CButton } from '@coreui/vue';
 <style>
 body {
   background-image: url(../assets/img/background6.jpeg);
-  background-size: auto;
-  background-repeat: no-repeat;
+  background-size: 100% 100%;
   margin: 0px;
   padding: 0px;
 }
