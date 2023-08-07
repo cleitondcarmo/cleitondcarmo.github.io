@@ -34,7 +34,7 @@ import { CButton } from '@coreui/vue';
             <p><span class="negrito">Área mais desenvolvida:</span> Front-End</p>
           </div>
         </div>
-        <CButton class="btn btn-danger buttonPDF" component="a" color="primary" target="_blank" href="https://drive.google.com/file/d/1NSQJcT8VvD64HmKcdf004isWGG1SCUCL/view" role="button">
+        <CButton class="btn btn-danger buttonPDF" component="a" color="primary" target="_blank" href="https://drive.google.com/file/d/11P8A8OJ27TEontPLfLaGL3PgUOHQLThZ/view?usp=sharing" role="button">
           <i class="bi bi-eye"></i>
             Currículo
         </CButton>

@@ -1,54 +1,82 @@
-<script setup lang="ts">
-import { RouterLink, RouterView } from 'vue-router'
-import 'bootstrap/dist/css/bootstrap.css'
-import { CDropdown, CDropdownItem, CDropdownMenu, CDropdownToggle, CButton } from '@coreui/vue';
-</script>
-
 <template>
   <div class="app">
     <header>
-      <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.2/font/bootstrap-icons.css">
-      <div class="divLogo">
-        <RouterLink id="Home" class="btn btn-outline-secondary" to="/" style="border: none; margin: 0px; padding: 0px;">
+      <link
+        rel="stylesheet"
+        href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.2/font/bootstrap-icons.css"
+      />
+      <div class="divLogo border-right-gradient-top">
+        <RouterLink
+          id="Home"
+          class="btn btn-outline-secondary"
+          to="/"
+          style="border: none; margin: 0px; padding: 0px"
+        >
           <img class="logo" src="@/assets/img/logo.jpg" />
         </RouterLink>
       </div>
       <div class="divNav">
         <div class="routersLink">
-          <RouterLink id="Home" class="btn btn-outline-secondary" to="/">
+          <RouterLink
+            id="Home"
+            class="btn btn-outline-secondary"
+            to="/"
+            :class="{ active: isRouteActive('/') }"
+          >
             <i id="iHome" class="bi bi-house-door-fill"></i>
           </RouterLink>
-          <RouterLink id="About" class="btn btn-outline-secondary" to="/about">
+          <RouterLink
+            id="About"
+            class="btn btn-outline-secondary"
+            to="/about"
+            :class="{ active: isRouteActive('/about') }"
+          >
             <i id="iAbout" class="bi bi-person-vcard-fill"></i>
           </RouterLink>
-          <RouterLink id="Contact" class="btn btn-outline-secondary" to="/contacts">
+          <RouterLink
+            id="Contact"
+            class="btn btn-outline-secondary"
+            to="/contacts"
+            :class="{ active: isRouteActive('/contacts') }"
+          >
             <i id="iContact" class="bi bi-phone-vibrate"></i>
           </RouterLink>
-          <RouterLink id="Projects" class="btn btn-outline-secondary" to="/projects">
+          <RouterLink
+            id="Projects"
+            class="btn btn-outline-secondary"
+            to="/projects"
+            :class="{ active: isRouteActive('/projects') }"
+          >
             <i id="iProjects" class="bi bi-code-slash"></i>
           </RouterLink>
         </div>
         <div class="divMenu">
           <CDropdown variant="nav-item">
-            <CDropdownToggle color="secondary"><img src="@/assets/img/menu.svg" /></CDropdownToggle>
+            <CDropdownToggle color="secondary">
+              <img src="@/assets/img/menu.svg" />
+            </CDropdownToggle>
             <CDropdownMenu>
-              <CDropdownItem href="#">
+              <CDropdownItem>
                 <RouterLink class="btn btn-outline-secondary" to="/">
                   <i id="iHome" class="bi bi-house-door-fill"></i>
                 </RouterLink>
               </CDropdownItem>
-              <CDropdownItem href="#">
+              <CDropdownItem>
                 <RouterLink class="btn btn-outline-secondary" to="/about">
                   <i id="iAbout" class="bi bi-person-vcard-fill"></i>
                 </RouterLink>
               </CDropdownItem>
-              <CDropdownItem href="#">
+              <CDropdownItem>
                 <RouterLink class="btn btn-outline-secondary" to="/contacts">
                   <i id="iContact" class="bi bi-phone-vibrate"></i>
                 </RouterLink>
               </CDropdownItem>
-              <CDropdownItem href="#">
-                <RouterLink id="Projects" class="btn btn-outline-secondary" to="/projects">
+              <CDropdownItem>
+                <RouterLink
+                  id="Projects"
+                  class="btn btn-outline-secondary"
+                  to="/projects"
+                >
                   <i id="iProjects" class="bi bi-code-slash"></i>
                 </RouterLink>
               </CDropdownItem>
@@ -56,27 +84,48 @@ import { CDropdown, CDropdownItem, CDropdownMenu, CDropdownToggle, CButton } fro
           </CDropdown>
         </div>
       </div>
-      <div class="divMost">
+      <div class="divMost border-right-gradient-bottom">
         <div class="perfilApp">
-          <CButton class="btnHref" component="a" href="https://www.facebook.com/cleitondcarmosilva/" role="button"
-            target="_blank">
+          <CButton
+            class="btnHref"
+            component="a"
+            href="https://www.facebook.com/cleitondcarmosilva/"
+            role="button"
+            target="_blank"
+          >
             <img class="imgPerfilApp" src="@/assets/img/face.svg" />
           </CButton>
         </div>
         <div class="perfilApp">
-          <CButton class="btnHref" component="a" href="https://www.instagram.com/cleitondcarmo/" role="button"
-            target="_blank">
+          <CButton
+            class="btnHref"
+            component="a"
+            href="https://www.instagram.com/cleitondcarmo/"
+            role="button"
+            target="_blank"
+          >
             <img class="imgPerfilApp" src="@/assets/img/insta.svg" />
           </CButton>
         </div>
         <div class="perfilApp">
-          <CButton class="btnHref" component="a" href="https://github.com/cleitondcarmo" role="button" target="_blank">
+          <CButton
+            class="btnHref"
+            component="a"
+            href="https://github.com/cleitondcarmo"
+            role="button"
+            target="_blank"
+          >
             <img class="imgPerfilApp" src="@/assets/img/github.svg" />
           </CButton>
         </div>
         <div class="perfilApp">
-          <CButton class="btnHref" component="a" href="https://www.linkedin.com/in/cleitondcarmo/" role="button"
-            target="_blank">
+          <CButton
+            class="btnHref"
+            component="a"
+            href="https://www.linkedin.com/in/cleitondcarmo/"
+            role="button"
+            target="_blank"
+          >
             <img class="imgPerfilApp" src="@/assets/img/linkedin.svg" />
           </CButton>
         </div>
@@ -89,8 +138,25 @@ import { CDropdown, CDropdownItem, CDropdownMenu, CDropdownToggle, CButton } fro
   </div>
 </template>
 
+<script setup lang="ts">
+import { RouterLink, RouterView, useRoute } from "vue-router";
+import "bootstrap/dist/css/bootstrap.css";
+import {
+  CDropdown,
+  CDropdownItem,
+  CDropdownMenu,
+  CDropdownToggle,
+  CButton,
+} from "@coreui/vue";
+const route = useRoute();
+
+function isRouteActive(path) {
+  return route.path === path;
+}
+</script>
+
 <style scoped>
-#app{
+#app {
   max-width: 100%;
   max-height: 100%;
 }
@@ -101,20 +167,6 @@ import { CDropdown, CDropdownItem, CDropdownMenu, CDropdownToggle, CButton } fro
 #iProjects {
   font-size: 24px;
   color: #969494;
-}
-
-#Contact:hover,
-#About:hover,
-#Home:hover,
-#Projects:hover {
-  background-color: #404140;
-}
-
-#Contact:hover #iContact,
-#About:hover #iAbout,
-#Home:hover #iHome, 
-#Projects:hover #iProjects {
-  color: #008000;
 }
 
 .logo {
@@ -134,10 +186,61 @@ import { CDropdown, CDropdownItem, CDropdownMenu, CDropdownToggle, CButton } fro
   height: 40px;
   border: 0px;
   padding: 0px;
-  margin: 5px;
+  margin: 0px;
 }
 
 @media (min-width: 801px) {
+  #Contact:hover,
+  #About:hover,
+  #Home:hover,
+  #Projects:hover {
+    background-color: rgba(0, 0, 0, 0.5);
+  }
+  .routersLink .btn {
+    border-right: 2px solid green;
+    border-radius: 0;
+    width: 46px;
+    margin-right: 0px;
+    margin-left: 4px;
+  }
+
+  /* Estilo para botões ativos */
+  .routersLink .btn.active {
+    background-color: rgba(0, 0, 0, 0.5);
+    border: 2px solid green;
+    border-radius: 4px 0px 0px 4px;
+    border-right: transparent !important;
+    padding-right: 4px;
+  }
+
+  .routersLink .btn.hover {
+    background-color: rgba(0, 0, 0, 0.5);
+  }
+
+  /* Estilo para ícones quando botão está ativo*/
+  .routersLink .btn.active #iHome,
+  .routersLink .btn.active #iAbout,
+  .routersLink .btn.active #iContact,
+  .routersLink .btn.active #iProjects {
+    color: green;
+  }
+
+  .border-right {
+    border-right: 2px solid green;
+  }
+
+  .border-right-gradient-top {
+    border-width: 2px;
+    border-left: transparent !important;
+    border-right-style: solid !important;
+    border-image: linear-gradient(to top, green, rgba(0, 0, 0, 0)) 1;
+  }
+  .border-right-gradient-bottom {
+    border-width: 2px;
+    border-left: transparent !important;
+    border-right-style: solid !important;
+    border-image: linear-gradient(to bottom, green, rgba(0, 0, 0, 0)) 1;
+  }
   .btn {
     display: block;
     padding: 0px;
@@ -154,8 +257,9 @@ import { CDropdown, CDropdownItem, CDropdownMenu, CDropdownToggle, CButton } fro
     grid-column-end: 2;
     min-height: 100%;
     background-color: black;
-    display: grid;
-    grid-template-rows: 25% 50% 25%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
   }
 
   .perfilApp {
@@ -164,7 +268,7 @@ import { CDropdown, CDropdownItem, CDropdownMenu, CDropdownToggle, CButton } fro
     display: flex;
     justify-content: center;
     padding: 0px;
-    margin: 10px auto;
+    margin: 5px auto;
   }
 
   .imgPerfilApp {
@@ -176,8 +280,7 @@ import { CDropdown, CDropdownItem, CDropdownMenu, CDropdownToggle, CButton } fro
   }
 
   .divLogo {
-    grid-column-start: 2;
-    grid-column-end: 2;
+    height: calc(50% - 80px);
     width: 50px;
   }
 
@@ -197,20 +300,20 @@ import { CDropdown, CDropdownItem, CDropdownMenu, CDropdownToggle, CButton } fro
 
   .divNav {
     width: 50px;
-    max-height: 100%;
+    height: 160px;
     font-size: 12px;
     text-align: center;
     background-color: black;
-    grid-column-start: 2;
-    grid-column-end: 2;
     display: flex;
     align-items: center;
   }
 
   .divMost {
-    grid-column-start: 2;
-    grid-column-end: 3;
-    margin: auto;
+    height: calc(50% - 80px);
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    padding-bottom: 20px;
   }
 
   body {
@@ -304,7 +407,8 @@ import { CDropdown, CDropdownItem, CDropdownMenu, CDropdownToggle, CButton } fro
     display: flex;
     justify-content: center;
   }
-  .dropdown-menu, .show{
+  .dropdown-menu,
+  .show {
     min-width: 50px !important;
   }
 }

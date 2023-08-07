@@ -135,8 +135,7 @@ export default {
                             <div class="blocosSkills" style="text-align: center; margin-top: 100px;  height: 135px;">
                                 <div>
                                     <p class="subtitulo">Experiência</p>
-                                    <div
-                                        style="display: flex; flex-wrap: wrap;  justify-content: center; text-align: center;">
+                                    <div style="display: flex; flex-wrap: wrap;  justify-content: center; text-align: center;">
                                         <div class="divFramework">
                                             <img src="../assets/img/vue.svg" alt="Vue">
                                             <p>VueJs</p>

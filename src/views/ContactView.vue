@@ -11,10 +11,7 @@ import { CButton } from '@coreui/vue';
     </div>
     <div class="contactDiv">
       <div class="mapsDiv">
-        <iframe
-          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d15432.120127292892!2d-42.66760763908388!3d-14.767338235310786!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x75004f36a06e7a1%3A0x843bc7dd1ed6694c!2sUrandi%2C%20BA%2C%2046350-000!5e0!3m2!1spt-BR!2sbr!4v1671289492835!5m2!1spt-BR!2sbr"
-          min-width="100%" min-height="100%" style="border:0;" loading="lazy"
-          referrerpolicy="no-referrer-when-downgrade"></iframe>
+        <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d5274.231287652758!2d-49.362911299380826!3d-20.813741231390964!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94bc52ce6910005f%3A0xb39d5c0e3b8c5675!2sS%C3%A3o%20Jos%C3%A9%20do%20Rio%20Preto%20-%20SP!5e0!3m2!1spt-PT!2sbr!4v1691366038237!5m2!1spt-PT!2sbr" width="100%" height="100%" style="border:0;" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>      
       </div>
       <div class="contactPhone">
 
@@ -88,6 +85,7 @@ body {
     color: rgb(253, 253, 253);
     animation: flicker 1.5s infinite alternate;
     padding: 10px;
+    font-size: 25px;
 }
 
 @keyframes flicker {
@@ -194,8 +192,8 @@ body {
     margin: 20px;
   }
 
-  .contactMeh1 {
-    font-size: 25px;
+  .contactMeh1 h1{
+    font-size: 25px !important;
   }
 
   .contact {
