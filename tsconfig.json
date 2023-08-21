@@ -12,7 +12,8 @@
     "verbatimModuleSyntax": true,
     "paths": {
       "@/*": ["./src/*"]
-    }
+    },
+    "types": ["node"]
   },
 
   "references": [

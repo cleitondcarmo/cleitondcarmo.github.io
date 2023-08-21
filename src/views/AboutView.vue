@@ -236,6 +236,13 @@ import { computed, onMounted, ref, reactive } from "vue";
 import translation from "@/translation";
 import Footer from "../components/footer.vue";
 
+import javascriptIcon from "@/assets/img/technologies/javascript.svg";
+import quasarIcon from "@/assets/img/technologies/quasar.svg";
+import reactIcon from "@/assets/img/technologies/react.svg";
+import vueIcon from "@/assets/img/technologies/vue.svg";
+import cssIcon from "@/assets/img/technologies/css3.svg";
+import htmlIcon from "@/assets/img/technologies/html5.svg";
+
 const store = useStore();
 const theme = computed(() => store.state.theme);
 
@@ -265,6 +272,8 @@ const currentTechnologyDescriptions = computed(() => {
   }));
 });
 
+const baseIconPath = "../assets/img/technologies"; // Replace with actual absolute path
+
 onMounted(() => {
   store.dispatch("initializeLanguage");
 });
@@ -279,37 +288,37 @@ const progressValue7 = ref(80);
 
 const technologies = reactive([
   {
-    icon: "/src/assets/img/technologies/javascript.svg",
+    icon: javascriptIcon,
     name: "Javascript",
     description: "1",
     unit: "year"
   },
   {
-    icon: "/src/assets/img/technologies/quasar.svg",
+    icon: quasarIcon,
     name: "Quasar",
     description: "8",
     unit: "months"
   },
   {
-    icon: "/src/assets/img/technologies/react.svg",
+    icon: reactIcon,
     name: "React",
     description: "6",
     unit: "months"
   },
   {
-    icon: "/src/assets/img/technologies/vue.svg",
+    icon: vueIcon,
     name: "Vue",
     description: "8",
     unit: "months"
   },
   {
-    icon: "/src/assets/img/technologies/css3.svg",
+    icon: cssIcon,
     name: "CSS",
     description: "1",
     unit: "year"
   },
   {
-    icon: "/src/assets/img/technologies/html5.svg",
+    icon: htmlIcon,
     name: "HTML",
     description: "1",
     unit: "year"
