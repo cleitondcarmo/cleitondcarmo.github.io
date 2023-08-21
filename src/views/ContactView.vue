@@ -311,7 +311,6 @@ body,
   .contactDiv {
     width: 100%;
     order: 2;
-    height: calc(100% - 60px);
     padding: 10px 0px 20px 0px;
   }
   .contact {
