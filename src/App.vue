@@ -53,6 +53,107 @@
             <i id="iProjects" class="bi bi-code-slash"></i>
           </RouterLink>
         </div>
+      </div>
+
+      <div
+        class="sessionConfig border-right-gradient-bottom"
+        :style="{ borderImage: borderGradientBottom }"
+      >
+        <div class="divMost">
+          <div class="perfilApp">
+            <CButton
+              class="btnHref"
+              component="a"
+              href="https://www.facebook.com/cleitondcarmosilva/"
+              role="button"
+              target="_blank"
+            >
+              <img class="imgPerfilApp" src="@/assets/img/face.svg" />
+            </CButton>
+          </div>
+          <div class="perfilApp">
+            <CButton
+              class="btnHref"
+              component="a"
+              href="https://www.instagram.com/cleitondcarmo/"
+              role="button"
+              target="_blank"
+            >
+              <img class="imgPerfilApp" src="@/assets/img/insta.svg" />
+            </CButton>
+          </div>
+          <div class="perfilApp">
+            <CButton
+              class="btnHref"
+              component="a"
+              href="https://github.com/cleitondcarmo"
+              role="button"
+              target="_blank"
+            >
+              <img class="imgPerfilApp" src="@/assets/img/github.svg" />
+            </CButton>
+          </div>
+          <div class="perfilApp">
+            <CButton
+              class="btnHref"
+              component="a"
+              href="https://www.linkedin.com/in/cleitondcarmo/"
+              role="button"
+              target="_blank"
+            >
+              <img class="imgPerfilApp" src="@/assets/img/linkedin.svg" />
+            </CButton>
+          </div>
+        </div>
+        <div class="theme">
+          <CButton
+            @click="
+              () => {
+                visibleModal = true;
+              }
+            "
+          >
+            <i
+              class="bi bi-gear iconSetting"
+              :style="{ color: theme.primaryColor }"
+            ></i>
+          </CButton>
+          <CModal
+            :visible="visibleModal"
+            @close="
+              () => {
+                visibleModal = false;
+              }
+            "
+          >
+            <CModalHeader> </CModalHeader>
+            <CModalBody>
+              <div class="buttonsTema">
+                <CButton @click="setThemeHandler('Verde')">
+                  <img class="iconThema" src="@/assets/img/themaGreen.png" />
+                </CButton>
+                <CButton @click="setThemeHandler('Laranja')">
+                  <img class="iconThema" src="@/assets/img/themaOrange.png" />
+                </CButton>
+                <CButton @click="setThemeHandler('Roxo')">
+                  <img class="iconThema" src="@/assets/img/themaPurple.png" />
+                </CButton>
+              </div>
+              <hr />
+              <div class="buttonsLanguage">
+                <CButton @click="setLanguageHandler('Portugues')">
+                  <img class="iconLanguage" src="@/assets/img/brasilFlag.png" />
+                </CButton>
+                <CButton @click="setLanguageHandler('English')">
+                  <img
+                    class="iconLanguage"
+                    src="@/assets/img/kingdomFlag.png"
+                  />
+                </CButton>
+              </div>
+            </CModalBody>
+          </CModal>
+        </div>
         <div class="divMenu">
           <CDropdown variant="nav-item">
             <CDropdownToggle color="secondary">
@@ -86,98 +187,6 @@
             </CDropdownMenu>
           </CDropdown>
         </div>
-      </div>
-      <div
-        class="divMost border-right-gradient-bottom"
-        :style="{ borderImage: borderGradientBottom }"
-      >
-        <div class="perfilApp">
-          <CButton
-            class="btnHref"
-            component="a"
-            href="https://www.facebook.com/cleitondcarmosilva/"
-            role="button"
-            target="_blank"
-          >
-            <img class="imgPerfilApp" src="@/assets/img/face.svg" />
-          </CButton>
-        </div>
-        <div class="perfilApp">
-          <CButton
-            class="btnHref"
-            component="a"
-            href="https://www.instagram.com/cleitondcarmo/"
-            role="button"
-            target="_blank"
-          >
-            <img class="imgPerfilApp" src="@/assets/img/insta.svg" />
-          </CButton>
-        </div>
-        <div class="perfilApp">
-          <CButton
-            class="btnHref"
-            component="a"
-            href="https://github.com/cleitondcarmo"
-            role="button"
-            target="_blank"
-          >
-            <img class="imgPerfilApp" src="@/assets/img/github.svg" />
-          </CButton>
-        </div>
-        <div class="perfilApp">
-          <CButton
-            class="btnHref"
-            component="a"
-            href="https://www.linkedin.com/in/cleitondcarmo/"
-            role="button"
-            target="_blank"
-          >
-            <img class="imgPerfilApp" src="@/assets/img/linkedin.svg" />
-          </CButton>
-        </div>
-      </div>
-      <div class="theme">
-        <CButton
-          @click="
-            () => {
-              visibleModal = true;
-            }
-          "
-        >
-          <i class="bi bi-gear iconSetting" :style="{color: theme.primaryColor}"></i>
-        </CButton>
-        <CModal
-          :visible="visibleModal"
-          @close="
-            () => {
-              visibleModal = false;
-            }
-          "
-        >
-          <CModalHeader> </CModalHeader>
-          <CModalBody>
-            <div class="buttonsTema">
-              <CButton @click="setThemeHandler('Verde')">
-                <img class="iconThema" src="@/assets/img/themaGreen.png" />
-              </CButton>
-              <CButton @click="setThemeHandler('Laranja')">
-                <img class="iconThema" src="@/assets/img/themaOrange.png" />
-              </CButton>
-              <CButton @click="setThemeHandler('Roxo')">
-                <img class="iconThema" src="@/assets/img/themaPurple.png" />
-              </CButton>
-            </div>
-            <hr />
-            <div class="buttonsLanguage">
-              <CButton @click="setLanguageHandler('Portugues')">
-                <img class="iconLanguage" src="@/assets/img/brasilFlag.png" />
-              </CButton>
-              <CButton @click="setLanguageHandler('English')">
-                <img class="iconLanguage" src="@/assets/img/kingdomFlag.png" />
-              </CButton>
-            </div>
-          </CModalBody>
-        </CModal>
       </div>
     </header>
 
@@ -326,7 +335,7 @@ function isRouteActive(path) {
   margin-bottom: 10px;
 }
 
-.theme i{
+.theme i {
   font-size: 25px;
 }
 
@@ -450,11 +459,17 @@ function isRouteActive(path) {
   }
 
   .divMost {
-    height: calc(50% - 130px);
     display: flex;
     flex-direction: column;
     justify-content: flex-end;
     padding-bottom: 20px;
+  }
+
+  .sessionConfig {
+    height: calc(50% - 80px);
+    display: flex;
+    flex-direction: column;
+    justify-content: end;
   }
 
   body {
@@ -464,6 +479,12 @@ function isRouteActive(path) {
 }
 
 @media (max-width: 800px) {
+  ::v-deep(.modal-dialog) {
+    max-width: 260px !important;
+    top: 60px;
+    right: 0px;
+    left: unset;
+  }
   .app {
     display: grid;
     grid-template-rows: 60px calc(100% - 60px) !important;
@@ -474,6 +495,7 @@ function isRouteActive(path) {
     grid-row-end: 2;
     background-color: black;
     display: flex;
+    justify-content: space-between;
   }
 
   .routersLink {
@@ -493,15 +515,7 @@ function isRouteActive(path) {
   }
 
   .divNav {
-    width: 100%;
-    max-height: 100%;
-    font-size: 12px;
-    text-align: center;
-    display: flex;
-    align-items: flex-end;
-    justify-content: flex-end;
-    background-color: black;
-    float: right;
+    width: 0px;
   }
 
   .divMenu {
@@ -515,6 +529,14 @@ function isRouteActive(path) {
     display: none;
   }
 
+  .sessionConfig {
+    display: flex;
+    margin-right: 10px;
+  }
+
+  .theme {
+    margin-bottom: 0px;
+  }
   .menu {
     width: 50px;
     height: 50px;

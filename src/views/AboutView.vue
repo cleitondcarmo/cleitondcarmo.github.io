@@ -75,18 +75,21 @@
                   {{ technology.name }}
                 </div>
                 <div class="descriptionTechnologySkills">
-                  {{ technology.description }} {{ currentTranslations[technology.unit] }}
+                  {{ technology.description }}
+                  {{ currentTranslations[technology.unit] }}
                 </div>
               </div>
             </div>
           </div>
         </div>
         <div class="conhecimentoSkills">
-          <div class="titleSkills">
-            {{ currentTranslations.knowledgeSkill }}
-          </div>
-          <div class="subTitleSkills">
-            {{ currentTranslations.subTitleSkill }}
+          <div>
+            <div class="titleSkills">
+              {{ currentTranslations.knowledgeSkill }}
+            </div>
+            <div class="subTitleSkills">
+              {{ currentTranslations.subTitleSkill }}
+            </div>
           </div>
           <div class="languagesSkills">
             <div class="languageSkill">
@@ -196,15 +199,17 @@
           <h5>
             {{ currentTranslations.graduationEducation }}
           </h5>
-          <p>
-            Instituto Federal Baiano
-          </p>
+          <p>Instituto Federal Baiano</p>
           <p>2019 - 2024</p>
         </div>
         <div class="certification">
           <CCarousel controls dark>
             <CCarouselItem>
-              <img class="imgCertification" src="../assets/img/certification/certificado-javascript.png" alt="certificado javascript" />
+              <img
+                class="imgCertification"
+                src="../assets/img/certification/certificado-javascript.png"
+                alt="certificado javascript"
+              />
             </CCarouselItem>
             <CCarouselItem>
               <img
@@ -266,9 +271,11 @@ const getTechnologyDescription = (technologyName) => {
 };
 
 const currentTechnologyDescriptions = computed(() => {
-  return technologies.map(technology => ({
+  return technologies.map((technology) => ({
     ...technology,
-    description: `${technology.description} ${getTechnologyDescription(technology.name.toLowerCase())}`
+    description: `${technology.description} ${getTechnologyDescription(
+      technology.name.toLowerCase()
+    )}`,
   }));
 });
 
@@ -291,37 +298,37 @@ const technologies = reactive([
     icon: javascriptIcon,
     name: "Javascript",
     description: "1",
-    unit: "year"
+    unit: "year",
   },
   {
     icon: quasarIcon,
     name: "Quasar",
     description: "8",
-    unit: "months"
+    unit: "months",
   },
   {
     icon: reactIcon,
     name: "React",
     description: "6",
-    unit: "months"
+    unit: "months",
   },
   {
     icon: vueIcon,
     name: "Vue",
     description: "8",
-    unit: "months"
+    unit: "months",
   },
   {
     icon: cssIcon,
     name: "CSS",
     description: "1",
-    unit: "year"
+    unit: "year",
   },
   {
     icon: htmlIcon,
     name: "HTML",
     description: "1",
-    unit: "year"
+    unit: "year",
   },
 ]);
 </script>
@@ -343,9 +350,6 @@ const technologies = reactive([
   justify-content: space-between;
   align-items: center;
   padding: 0px 100px;
-}
-
-.title-page {
 }
 
 .bar-details {
@@ -380,14 +384,14 @@ const technologies = reactive([
   justify-content: space-between;
 }
 
-.title-description{
+.title-description {
   color: #000000;
   width: 260px;
   font-weight: 800;
   font-size: 17px;
 }
 
-.description-me{
+.description-me {
   font-weight: 600;
   font-size: 16px;
   color: #000000;
@@ -569,7 +573,7 @@ const technologies = reactive([
 
 /* EDUCATION */
 /* graduation */
-.graduation{
+.graduation {
   margin: 0px 20px;
   color: #000000;
   display: flex;
@@ -587,7 +591,10 @@ const technologies = reactive([
 }
 
 /* certification */
-.certification .carousel-item.active, .carousel-item-next, .carousel-item-prev, .certification .carousel-item {
+.certification .carousel-item.active,
+.carousel-item-next,
+.carousel-item-prev,
+.certification .carousel-item {
   min-height: 100% !important;
 }
 
@@ -605,9 +612,139 @@ const technologies = reactive([
   min-height: 100%;
 }
 
-@media (min-width: 801px) {
+@media (max-width: 599px) {
+  .about,
+  .education {
+    padding: 20px 20px !important;
+    flex-direction: column;
+    height: auto;
+  }
+  .about-me {
+    margin: 0px;
+    order: 2;
+    margin-top: 20px;
+    text-align: center;
+    align-items: center;
+    height: 250px;
+  }
+  .divfoto{
+    order: 1;
+  }
+  .title-description{
+    font-size: 14px;
+  }
+  .description-me{
+    font-size: 12px;
+  }
+  .subTitleSkills, .nameTechnologySkills{
+    font-size: 12px;
+  }
+  .titleSkills{
+    font-size: 14px;
+  }
+  .title-page-skill, .title-page{
+    display: none;
+  }
+  .experienceSkills{
+    padding: 20px 0px 0px 0px;
+  }
+  .about-me{
+    width: 80%;
+  }
+  .experienceSkills, .conhecimentoSkills{
+    width: 100%;
+  }
+  .skills{
+    height: 530px;
+    flex-direction: column;
+    height: auto;
+    padding: 10px;
+  }
+  .conhecimentoSkills{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    margin-top: 20px;
+  }
+  .technologiesSkills {
+    width: 150px;
+  }
+  .divTechnologiesSkills{
+    flex-direction: row;
+    justify-content: space-around;
+  }
+  .certification{
+    width: 100%;
+  }
 }
 
-@media (max-width: 800px) {
+@media (min-width: 600px) and (max-width: 800px) {
+  .about,
+  .education {
+    padding: 0px 20px !important;
+  }
+  .about-me {
+    margin: 0px;
+  }
+  .title-page-skill, .title-page{
+    display: none;
+  }
+  .title-description{
+    font-size: 16px;
+  }
+  .subTitleSkills, .nameTechnologySkills{
+    font-size: 14px;
+  }
+  .titleSkills{
+    font-size: 18px;
+  }
+  .description-me{
+    font-size: 14px;
+  }
+  .about-me{
+    width: 50%;
+  }
+  .experienceSkills, .conhecimentoSkills{
+    width: 50%;
+  }
+  .skills{
+    height: 450px;
+  }
+  .experienceSkills{
+    padding: 20px 0px 0px 0px;
+  }
+  .conhecimentoSkills{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+  .technologiesSkills {
+    width: 150px;
+  }
+}
+
+@media (min-width: 801px) and (max-width: 1050px) {
+  .about,
+  .education {
+    padding: 0px 20px !important;
+  }
+  .technologiesSkills {
+    width: 150px;
+  }
+  .about-me {
+    margin: 0px;
+  }
+  .skills{
+    height: 430px;
+    padding: 10px;
+  }
+  .conhecimentoSkills{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+  .certification{
+    padding: 0px;
+  }
 }
 </style>

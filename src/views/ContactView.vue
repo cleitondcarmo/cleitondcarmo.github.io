@@ -169,7 +169,7 @@ body, .background {
 
 .divBody {
   width: 100%;
-  min-height: calc(100% - 20px);
+  min-height: calc(100vh - 20px);
   display: flex;
   flex-direction: row;
 }
@@ -286,7 +286,22 @@ body, .background {
 
 }
 
-@media (max-width: 420px) {
-
+@media (max-width: 570px) {
+.divBody{
+  flex-direction: column;
+}
+.mapsDiv{
+  order: 1;
+  width: 100%;
+  height: 200px;
+}
+.contactDiv{
+  width: 100%;
+  order: 2;
+  height: calc(100vh - 200px);
+}
+.contact{
+  margin-bottom: 50px;
+}
 }
 </style>

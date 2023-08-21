@@ -47,9 +47,7 @@ const dynamicStyles = computed(() => ({
 <style>
 .divBodyHome {
   min-width: 100%;
-  min-height: calc(100% - 20px);
-  background-image: url(../assets/img/background.jpg);
-  background-size: 100% 100%;
+  min-height: calc(100vh - 20px);
   margin: 0px;
   padding: 0px;
   display: flex;
@@ -102,15 +100,18 @@ const dynamicStyles = computed(() => ({
   color: #008000 !important;
 }
 
-@media (max-width: 800px) {
+@media (max-width: 450px) {
   .divBodyHome {
-    display: flex;
-    align-items: flex-start;
-  }
 
+  }
+  .h1One{
+    font-size: 30px;
+  }
+  .h1Two{
+    font-size: 25px;
+  }
   .nome {
-    color: white;
-    margin: 50px 50px;
+
   }
 }
 </style>

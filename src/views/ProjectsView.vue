@@ -306,7 +306,7 @@ body {
 .divTitulo {
   color: var(--primary-color);
   font-size: 20px;
-  margin-left: 10px;
+  margin: 0px 10px;
   font-weight: 600;
   border-bottom: white solid 1px;
   display: flex;
@@ -498,235 +498,203 @@ scroll-page {
 
 @media (max-width: 300px) {
 
-  .descProject2 {
-    font-size: 10px !important;
-  }
+.descProject2 {
+  font-size: 10px !important;
+}
 }
 
 @media (max-width: 399px) {
- 
-  .displayPage {
-    display: none !important;
-  }
 
-  .divPrincipalProject {
-    margin: auto;
-    width: calc(100% - 4px);
-  }
+.displayPage {
+  display: none !important;
+}
 
-  .principalProject {
-    width: 100%;
-    margin: 10px 0px;
-    padding: 4px;
-  }
+.divPrincipalProject {
+  margin: auto;
+  width: calc(100% - 4px);
+}
 
-  .descProject {
-    width: 100% !important;
-    display: grid;
-    grid-template-columns: 50% 50%;
-  }
+.principalProject {
+  width: 100%;
+  margin: 10px 0px;
+  padding: 4px;
+}
 
-  .descProject2 {
-    font-size: 12px;
-    margin: 0px;
-    padding: 4px;
-    width: 100%;
-  }
+.descProject {
+  width: 100% !important;
+  display: grid;
+  grid-template-columns: 50% 50%;
+}
 
-  .divTitulo,
-  .divAboutProject {
-    max-width: calc(100% - 8px) !important;
-    min-width: calc(100% - 8px) !important;
-    margin: 0px 4px;
-  }
+.descProject2 {
+  font-size: 12px;
+  margin: 0px;
+  padding: 4px;
+  width: 100%;
+}
 
-  .imgProject {
-    width: 100%;
-    height: 200px;
-    margin: auto;
-    justify-content: center;
-  }
+.divTitulo,
+.divAboutProject {
+  max-width: calc(100% - 8px) !important;
+  min-width: calc(100% - 8px) !important;
+  margin: 0px 4px;
+}
 
-  .divImgPrincipais img,
-  .divImgMeny img {
-    height: 100% !important;
-  }
+.imgProject {
+  width: 100%;
+  height: 200px;
+  margin: auto;
+  justify-content: center;
+}
 
-  .divImgMeny {
-    margin: 4px !important;
-  }
+.divImgPrincipais img,
+.divImgMeny img {
+  height: 100% !important;
+}
 
-  .imgPrincipalProject {
-    min-width: 100%;
-    max-width: 100%;
-  }
+.divImgMeny {
+  margin: 4px !important;
+}
 
-  .todosProjetos {
-    margin: 4px;
-    width: calc(100% - 8px);
-    padding: 0px 0px 20px 0px;
-    justify-content: center;
-    font-size: 12px;
-  }
+.imgPrincipalProject {
+  min-width: 100%;
+  max-width: 100%;
+}
 
-  .divProjeto {
-    width: 150px;
-  }
+.todosProjetos {
+  margin: 4px;
+  width: calc(100% - 8px);
+  padding: 0px 0px 20px 0px;
+  justify-content: center;
+  font-size: 12px;
+}
+
+.divProjeto {
+  width: 150px;
+}
 
 }
 
 @media (min-width: 400px) and (max-width: 619px) {
+.displayPage {
+  display: none !important;
+}
+
+.divPrincipalProject {
+  margin: auto;
+  width: calc(100% - 4px);
+}
+
+.principalProject {
+  width: 100%;
+  margin: 10px 0px;
+  padding: 4px;
+}
+
+.descProject {
+  width: 100% !important;
+  max-width: 500px;
+  display: grid;
+  margin: auto;
+  grid-template-columns: 50% 50%;
+}
+
+.descProject2 {
+  font-size: 14px;
+  margin: 0px;
+  padding: 4px;
+  width: 100%;
+}
+
+.divTitulo,
+.divAboutProject {
+  max-width: calc(100% - 8px) !important;
+  min-width: calc(100% - 8px) !important;
+  margin: 0px 4px;
+}
+
+.imgProject {
+  width: 100%;
+  margin: auto;
+  justify-content: center;
+}
+
+.divImgMeny {
+  margin: 4px !important;
+}
+
+.imgPrincipalProject {
+  min-width: 100%;
+  max-width: 100%;
+}
+
+.todosProjetos {
+  margin: 4px;
+  width: calc(100% - 8px);
+  padding: 0px;
+  justify-content: center;
+  font-size: 14px;
+}
+
+.divProjeto {
+  width: 170px;
+}
+}
+
+@media (max-width: 1269px) {
   .displayPage {
     display: none !important;
   }
 
   .divPrincipalProject {
     margin: auto;
-    width: calc(100% - 4px);
+    width: calc(100% - 10px);
+    height: auto;
   }
 
   .principalProject {
     width: 100%;
     margin: 10px 0px;
-    padding: 4px;
+  }
+
+  .divAboutProject {
+    width: 100%;
   }
 
   .descProject {
-    width: 100% !important;
-    max-width: 500px;
-    display: grid;
     margin: auto;
-    grid-template-columns: 50% 50%;
   }
 
   .descProject2 {
-    font-size: 14px;
+    margin: 5px;
+  }
+
+  .imgProject {
+    width: 100%;
+    max-width: 520px;
+    margin: auto;
+    justify-content: center;
+  }
+
+  .divImgPrincipais {
+    margin: auto;
+  }
+  
+  .projectView{
+    padding: 0px;
+  }
+  .divPrincipalProject .carousel-control-prev{
+    left: 0px;
+  }
+  .divPrincipalProject .carousel-control-next{
+    right: 0px;
+  }
+  .divPrincipalProject .carousel{
     margin: 0px;
-    padding: 4px;
-    width: 100%;
-  }
-
-  .divTitulo,
-  .divAboutProject {
-    max-width: calc(100% - 8px) !important;
-    min-width: calc(100% - 8px) !important;
-    margin: 0px 4px;
-  }
-
-  .imgProject {
-    width: 100%;
-    margin: auto;
-    justify-content: center;
-  }
-
-  .divImgMeny {
-    margin: 4px !important;
-  }
-
-  .imgPrincipalProject {
-    min-width: 100%;
-    max-width: 100%;
-  }
-
-  .todosProjetos {
-    margin: 4px;
-    width: calc(100% - 8px);
-    padding: 0px;
-    justify-content: center;
-    font-size: 14px;
-  }
-
-  .divProjeto {
-    width: 170px;
   }
 }
 
-@media (min-width: 620px) and (max-width: 1125px) {
-  .displayPage {
-    display: none !important;
-  }
-
-  .divPrincipalProject {
-    margin: auto;
-    width: calc(100% - 10px);
-  }
-
-  .principalProject {
-    width: 100%;
-    margin: 10px 0px;
-  }
-
-  .divAboutProject {
-    width: 100%;
-  }
-
-  .descProject {
-    margin: auto;
-  }
-
-  .descProject2 {
-    margin: 5px;
-  }
-
-  .imgProject {
-    width: 100%;
-    max-width: 520px;
-    margin: auto;
-    justify-content: center;
-  }
-
-  .divImgPrincipais {
-    margin: auto;
-  }
-
-  .todosProjetos {
-    margin: 5px;
-    width: calc(100% - 10px);
-    padding: 0px;
-    justify-content: center;
-  }
-}
-
-@media (min-width: 1126px) and (max-width: 1269px) {
-  .displayPage {
-    display: none !important;
-  }
-
-  .divPrincipalProject {
-    margin: auto;
-    width: calc(100% - 10px);
-  }
-
-  .principalProject {
-    width: 100%;
-    margin: 10px 0px;
-  }
-
-  .divAboutProject {
-    width: 100%;
-  }
-
-  .descProject {
-    margin: auto;
-  }
-
-  .descProject2 {
-    margin: 5px;
-  }
-
-  .imgProject {
-    width: 100%;
-    max-width: 520px;
-    margin: auto;
-    justify-content: center;
-  }
-
-  .divImgPrincipais {
-    margin: auto;
-  }
-}
-
-@media (min-width: 1269px) {
+@media (min-width: 1270px) {
   .divImgMeny {
     margin: 18px !important;
   }
