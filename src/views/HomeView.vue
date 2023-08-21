@@ -46,7 +46,7 @@ const dynamicStyles = computed(() => ({
 
 <style>
 .backgroundHome{
-  min-height: calc(100vh - 80px);
+  min-height: calc(100vh - 60px);
   width: 100%;
   height: 100%;
   background-image: url(../assets/img/background.jpg);

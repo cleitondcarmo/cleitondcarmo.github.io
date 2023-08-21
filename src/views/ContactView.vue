@@ -299,13 +299,6 @@ body,
 }
 
 @media (max-width: 570px) {
-  .backgroundContact {
-    min-height: calc(100vh - 80px);
-    width: 100%;
-    height: 100%;
-    background-image: url(../assets/img/background.jpg);
-    background-size: 100% 100%;
-  }
   .divBody {
     flex-direction: column;
     min-height: unset;
