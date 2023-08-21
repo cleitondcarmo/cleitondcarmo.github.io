@@ -1,5 +1,5 @@
 <template>
-  <div class="background">
+  <div class="backgroundHome">
     <div class="divBodyHome">
       <div class="nome" :style="dynamicStyles">
         <h1 class="h1One" :style="{ color: theme.primaryColor }">
@@ -45,8 +45,12 @@ const dynamicStyles = computed(() => ({
 </script>
 
 <style>
-.background{
+.backgroundHome{
   min-height: calc(100vh - 80px);
+  width: 100%;
+  height: 100%;
+  background-image: url(../assets/img/background.jpg);
+  background-size: 100% 100%;
 }
 .divBodyHome {
   min-width: 100%;

@@ -1,5 +1,5 @@
 <template>
-  <div class="background">
+  <div class="backgroundContact">
     <div class="divBody">
       <div class="contactDiv">
         <div class="contactMe">
@@ -157,12 +157,12 @@ const submitForm = async () => {
 </script>
 
 <style>
-body, .background {
+body, .backgroundContact {
   width: 100%;
   height: 100%;
 }
 
-.background{
+.backgroundContact{
   background-image: url(../assets/img/background.jpg);
   background-size: 100% 100%;
 }
@@ -280,10 +280,6 @@ body, .background {
   width: 100%;
   min-height: 100%;
   filter: brightness(80%);
-}
-
-@media (max-width: 800px) {
-
 }
 
 @media (max-width: 570px) {
