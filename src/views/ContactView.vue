@@ -173,20 +173,20 @@ const submitForm = async () => {
 </script>
 
 <style>
-body,
 .backgroundContact {
   width: 100%;
   height: 100%;
 }
 
 .backgroundContact {
+  min-height: calc(100vh - 60px);
   background-image: url(../assets/img/background.jpg);
   background-size: 100% 100%;
 }
 
 .divBody {
   width: 100%;
-  min-height: calc(100vh - 20px);
+  height: calc(100% - 20px);
   display: flex;
   flex-direction: row;
 }
@@ -194,7 +194,7 @@ body,
 .contactDiv {
   color: white;
   width: 50%;
-  min-height: 100%;
+  height: 100%;
   background-color: #212121;
   display: flex;
   flex-direction: column;
@@ -289,7 +289,7 @@ body,
 
 .mapsDiv {
   width: 50%;
-  min-height: 100%;
+  height: 100%;
 }
 
 .dark-map {
@@ -301,7 +301,6 @@ body,
 @media (max-width: 570px) {
   .divBody {
     flex-direction: column;
-    min-height: unset;
   }
   .mapsDiv {
     order: 1;
@@ -310,6 +309,7 @@ body,
   }
   .contactDiv {
     width: 100%;
+    height: 100%;
     order: 2;
     padding: 10px 0px 20px 0px;
   }

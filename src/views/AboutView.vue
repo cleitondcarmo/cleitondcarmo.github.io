@@ -358,9 +358,6 @@ const technologies = reactive([
   margin: 10px auto;
 }
 
-.circle-details {
-}
-
 .text-one-title-page {
   text-align: center;
   font-size: 20px;
