@@ -45,9 +45,12 @@ const dynamicStyles = computed(() => ({
 </script>
 
 <style>
+.background{
+  min-height: calc(100vh - 80px);
+}
 .divBodyHome {
   min-width: 100%;
-  min-height: calc(100vh - 20px);
+  min-height: 100%;
   margin: 0px;
   padding: 0px;
   display: flex;
@@ -101,17 +104,11 @@ const dynamicStyles = computed(() => ({
 }
 
 @media (max-width: 450px) {
-  .divBodyHome {
-
-  }
   .h1One{
     font-size: 30px;
   }
   .h1Two{
     font-size: 25px;
-  }
-  .nome {
-
   }
 }
 </style>

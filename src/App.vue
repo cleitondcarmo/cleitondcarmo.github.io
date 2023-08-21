@@ -157,7 +157,7 @@
         <div class="divMenu">
           <CDropdown variant="nav-item">
             <CDropdownToggle color="secondary">
-              <img src="@/assets/img/menu.svg" />
+              <i class="bi bi-three-dots-vertical iconMenu" :style="{ color: theme.primaryColor }"></i>
             </CDropdownToggle>
             <CDropdownMenu>
               <CDropdownItem>
@@ -273,7 +273,9 @@ function isRouteActive(path) {
   font-size: 35px;
   cursor: pointer;
 }
-
+.iconMenu{
+  font-size: 35px;
+}
 .iconSetting:hover {
   transform: rotate(45deg);
 }
@@ -534,8 +536,8 @@ function isRouteActive(path) {
     margin-right: 10px;
   }
 
-  .theme {
-    margin-bottom: 0px;
+  .theme i{
+    margin-top: 1px;
   }
   .menu {
     width: 50px;
