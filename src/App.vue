@@ -274,6 +274,7 @@ function isRouteActive(path) {
   cursor: pointer;
 }
 .iconMenu{
+  margin-top: 2px;
   font-size: 35px;
 }
 .iconSetting:hover {
@@ -334,7 +335,6 @@ function isRouteActive(path) {
   width: 100%;
   display: flex;
   justify-content: center;
-  margin-bottom: 10px;
 }
 
 .theme i {
@@ -558,11 +558,6 @@ function isRouteActive(path) {
   .dropdown-toggle::after {
     border: none;
     content: none;
-  }
-
-  .divMenu a :hover {
-    background-color: rgb(100, 102, 100);
-    border-radius: 100%;
   }
 
   .divMenu a {

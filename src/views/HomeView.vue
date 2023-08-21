@@ -52,9 +52,10 @@ const dynamicStyles = computed(() => ({
   background-image: url(../assets/img/background.jpg);
   background-size: 100% 100%;
 }
+
 .divBodyHome {
   min-width: 100%;
-  min-height: 100%;
+  height: calc(100% - 20px);
   margin: 0px;
   padding: 0px;
   display: flex;

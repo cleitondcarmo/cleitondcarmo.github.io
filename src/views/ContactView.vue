@@ -3,7 +3,7 @@
     <div class="divBody">
       <div class="contactDiv">
         <div class="contactMe">
-          <h1 class="contactMeh1">{{currentTranslations.contact}}</h1>
+          <h1 class="contactMeh1">{{ currentTranslations.contact }}</h1>
         </div>
         <div class="contact">
           <div class="perfil">
@@ -14,7 +14,10 @@
               role="button"
               target="_blank"
             >
-              <img class="imgPerfil" src="@/assets/img/media_pack_gray/iconLinkedinCinza.svg" />
+              <img
+                class="imgPerfil"
+                src="@/assets/img/media_pack_gray/iconLinkedinCinza.svg"
+              />
             </CButton>
           </div>
           <div class="perfil">
@@ -25,7 +28,10 @@
               role="button"
               target="_blank"
             >
-              <img class="imgPerfil" src="@/assets/img/media_pack_gray/iconInstagramCinza.svg" />
+              <img
+                class="imgPerfil"
+                src="@/assets/img/media_pack_gray/iconInstagramCinza.svg"
+              />
             </CButton>
           </div>
           <div class="perfil">
@@ -36,7 +42,10 @@
               role="button"
               target="_blank"
             >
-              <img class="imgPerfil" src="@/assets/img/media_pack_gray/iconFacebookCinza.svg" />
+              <img
+                class="imgPerfil"
+                src="@/assets/img/media_pack_gray/iconFacebookCinza.svg"
+              />
             </CButton>
           </div>
           <div class="perfil">
@@ -47,7 +56,10 @@
               role="button"
               target="_blank"
             >
-              <img class="imgPerfil" src="@/assets/img/media_pack_gray/iconGithubCinza.svg" />
+              <img
+                class="imgPerfil"
+                src="@/assets/img/media_pack_gray/iconGithubCinza.svg"
+              />
             </CButton>
           </div>
           <div class="perfil">
@@ -58,7 +70,10 @@
               role="button"
               target="_blank"
             >
-              <img class="imgPerfil" src="@/assets/img/media_pack_gray/iconWhatsappCinza.svg" />
+              <img
+                class="imgPerfil"
+                src="@/assets/img/media_pack_gray/iconWhatsappCinza.svg"
+              />
             </CButton>
           </div>
         </div>
@@ -85,7 +100,9 @@
               v-model="formData.message"
               name="message"
             ></textarea>
-            <CButton class="buttonSubmit" type="submit">{{currentTranslations.send}}</CButton>
+            <CButton class="buttonSubmit" type="submit">{{
+              currentTranslations.send
+            }}</CButton>
           </form>
           <div v-if="showAlert" class="alert alert-success">
             {{ alertMessage }}
@@ -114,7 +131,7 @@ import { CButton } from "@coreui/vue";
 import axios from "axios";
 import { ref } from "vue";
 import { useStore } from "vuex";
-import { computed} from "vue";
+import { computed } from "vue";
 import translation from "@/translation";
 import Footer from "../components/footer.vue";
 
@@ -144,10 +161,9 @@ const submitForm = async () => {
 
     // Exibir o alerta de sucesso
     showAlert.value = true;
-    if(currentLanguage.value === "English"){
+    if (currentLanguage.value === "English") {
       alertMessage.value = "Email successfully sent!";
-    }
-    else{
+    } else {
       alertMessage.value = "E-mail enviado com sucesso!";
     }
   } catch (error) {
@@ -157,12 +173,13 @@ const submitForm = async () => {
 </script>
 
 <style>
-body, .backgroundContact {
+body,
+.backgroundContact {
   width: 100%;
   height: 100%;
 }
 
-.backgroundContact{
+.backgroundContact {
   background-image: url(../assets/img/background.jpg);
   background-size: 100% 100%;
 }
@@ -224,7 +241,6 @@ body, .backgroundContact {
   width: 80%;
 }
 
-
 .contact-form {
   width: 80%;
   height: 220px;
@@ -283,21 +299,33 @@ body, .backgroundContact {
 }
 
 @media (max-width: 570px) {
-.divBody{
-  flex-direction: column;
-}
-.mapsDiv{
-  order: 1;
-  width: 100%;
-  height: 200px;
-}
-.contactDiv{
-  width: 100%;
-  order: 2;
-  height: calc(100vh - 200px);
-}
-.contact{
-  margin-bottom: 50px;
-}
+  .backgroundContact {
+    min-height: calc(100vh - 80px);
+    width: 100%;
+    height: 100%;
+    background-image: url(../assets/img/background.jpg);
+    background-size: 100% 100%;
+  }
+  .divBody {
+    flex-direction: column;
+    min-height: unset;
+  }
+  .mapsDiv {
+    order: 1;
+    width: 100%;
+    height: 200px;
+  }
+  .contactDiv {
+    width: 100%;
+    order: 2;
+    height: calc(100% - 60px);
+    padding: 10px 0px 20px 0px;
+  }
+  .contact {
+    margin-bottom: 20px;
+  }
+  .contactMe {
+    margin: 10px;
+  }
 }
 </style>
