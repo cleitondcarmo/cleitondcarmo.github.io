@@ -5,7 +5,10 @@
         rel="stylesheet"
         href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.2/font/bootstrap-icons.css"
       />
-      <div class="divLogo border-right-gradient-top">
+      <div
+        class="divLogo border-right-gradient-top"
+        :style="{ borderImage: borderGradientTop }"
+      >
         <RouterLink
           id="Home"
           class="btn btn-outline-secondary"
@@ -15,7 +18,7 @@
           <img class="logo" src="@/assets/img/logo.jpg" />
         </RouterLink>
       </div>
-      <div class="divNav">
+      <div class="divNav" :style="dynamicStyles">
         <div class="routersLink">
           <RouterLink
             id="Home"
@@ -84,7 +87,10 @@
           </CDropdown>
         </div>
       </div>
-      <div class="divMost border-right-gradient-bottom">
+      <div
+        class="divMost border-right-gradient-bottom"
+        :style="{ borderImage: borderGradientBottom }"
+      >
         <div class="perfilApp">
           <CButton
             class="btnHref"
@@ -130,6 +136,49 @@
           </CButton>
         </div>
       </div>
+      <div class="theme">
+        <CButton
+          @click="
+            () => {
+              visibleModal = true;
+            }
+          "
+        >
+          <i class="bi bi-gear iconSetting" :style="{color: theme.primaryColor}"></i>
+        </CButton>
+        <CModal
+          :visible="visibleModal"
+          @close="
+            () => {
+              visibleModal = false;
+            }
+          "
+        >
+          <CModalHeader> </CModalHeader>
+          <CModalBody>
+            <div class="buttonsTema">
+              <CButton @click="setThemeHandler('Verde')">
+                <img class="iconThema" src="@/assets/img/themaGreen.png" />
+              </CButton>
+              <CButton @click="setThemeHandler('Laranja')">
+                <img class="iconThema" src="@/assets/img/themaOrange.png" />
+              </CButton>
+              <CButton @click="setThemeHandler('Roxo')">
+                <img class="iconThema" src="@/assets/img/themaPurple.png" />
+              </CButton>
+            </div>
+            <hr />
+            <div class="buttonsLanguage">
+              <CButton @click="setLanguageHandler('Portugues')">
+                <img class="iconLanguage" src="@/assets/img/brasilFlag.png" />
+              </CButton>
+              <CButton @click="setLanguageHandler('English')">
+                <img class="iconLanguage" src="@/assets/img/kingdomFlag.png" />
+              </CButton>
+            </div>
+          </CModalBody>
+        </CModal>
+      </div>
     </header>
 
     <body>
@@ -140,15 +189,52 @@
 
 <script setup lang="ts">
 import { RouterLink, RouterView, useRoute } from "vue-router";
-import "bootstrap/dist/css/bootstrap.css";
+import { useStore } from "vuex";
+import { computed, ref } from "vue";
+import translation from "@/translation";
 import {
   CDropdown,
   CDropdownItem,
   CDropdownMenu,
   CDropdownToggle,
   CButton,
+  CModal,
+  CModalHeader,
+  CModalBody,
 } from "@coreui/vue";
+
+const store = useStore();
+const theme = computed(() => store.state.theme);
+
+const dynamicStyles = computed(() => ({
+  "--primary-color": theme.value.primaryColor,
+  "--secondary-color": theme.value.secondaryColor,
+  "--third-color": theme.value.thirdColor,
+}));
+
+const gradientTop = computed(() => theme.value.gradientTop);
+const borderGradientTop = computed(() => `${gradientTop.value}`);
+
+const gradientBottom = computed(() => theme.value.gradientBottom);
+const borderGradientBottom = computed(() => `${gradientBottom.value}`);
+
 const route = useRoute();
+
+const visibleModal = ref(false);
+
+const setThemeHandler = (themeName: string) => {
+  store.dispatch("setThemeByName", themeName);
+};
+
+const currentLanguage = ref("Portugues");
+
+const setLanguageHandler = (language) => {
+  store.dispatch("setLanguage", language);
+};
+
+const currentTranslations = computed(() => {
+  return translation[currentLanguage.value] || {};
+});
 
 function isRouteActive(path) {
   return route.path === path;
@@ -159,6 +245,50 @@ function isRouteActive(path) {
 #app {
   max-width: 100%;
   max-height: 100%;
+}
+
+.iconThema {
+  width: 50px;
+  height: 50px;
+  transition: transform 0.3s ease-in-out;
+}
+.iconThema:hover {
+  width: 50px;
+  height: 50px;
+  transform: rotate(360deg);
+}
+
+.iconSetting,
+.iconLanguage {
+  width: 60px;
+  font-size: 35px;
+  cursor: pointer;
+}
+
+.iconSetting:hover {
+  transform: rotate(45deg);
+}
+
+.iconLanguage:hover {
+  transform: scale(1.1);
+}
+
+::v-deep(.modal-dialog) {
+  max-width: 200px !important;
+  margin: 0;
+  position: fixed;
+  bottom: 0;
+  left: 50px;
+}
+
+.buttonsTema,
+.buttonsLanguage {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+.buttonsLanguage {
+  margin: 0px 10px;
 }
 
 #iHome,
@@ -189,6 +319,17 @@ function isRouteActive(path) {
   margin: 0px;
 }
 
+.theme {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  margin-bottom: 10px;
+}
+
+.theme i{
+  font-size: 25px;
+}
+
 @media (min-width: 801px) {
   #Contact:hover,
   #About:hover,
@@ -197,7 +338,7 @@ function isRouteActive(path) {
     background-color: rgba(0, 0, 0, 0.5);
   }
   .routersLink .btn {
-    border-right: 2px solid green;
+    border-right: 2px solid var(--primary-color);
     border-radius: 0;
     width: 46px;
     margin-right: 0px;
@@ -206,8 +347,8 @@ function isRouteActive(path) {
 
   /* Estilo para botões ativos */
   .routersLink .btn.active {
-    background-color: rgba(0, 0, 0, 0.5);
-    border: 2px solid green;
+    background-color: var(--active-bg-color, rgba(0, 0, 0, 0.5));
+    border: 2px solid var(--primary-color);
     border-radius: 4px 0px 0px 4px;
     border-right: transparent !important;
     padding-right: 4px;
@@ -222,25 +363,25 @@ function isRouteActive(path) {
   .routersLink .btn.active #iAbout,
   .routersLink .btn.active #iContact,
   .routersLink .btn.active #iProjects {
-    color: green;
+    color: var(--primary-color);
   }
 
   .border-right {
-    border-right: 2px solid green;
+    border-right: 2px solid var(--primary-color);
   }
 
   .border-right-gradient-top {
     border-width: 2px;
     border-left: transparent !important;
     border-right-style: solid !important;
-    border-image: linear-gradient(to top, green, rgba(0, 0, 0, 0)) 1;
   }
+
   .border-right-gradient-bottom {
     border-width: 2px;
     border-left: transparent !important;
     border-right-style: solid !important;
-    border-image: linear-gradient(to bottom, green, rgba(0, 0, 0, 0)) 1;
   }
+
   .btn {
     display: block;
     padding: 0px;
@@ -309,7 +450,7 @@ function isRouteActive(path) {
   }
 
   .divMost {
-    height: calc(50% - 80px);
+    height: calc(50% - 130px);
     display: flex;
     flex-direction: column;
     justify-content: flex-end;
@@ -401,7 +542,7 @@ function isRouteActive(path) {
   }
 
   .divMenu a {
-    color: green;
+    color: var(--primary-color);
     height: 100%;
     width: 100%;
     display: flex;
