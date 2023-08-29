@@ -157,7 +157,10 @@
         <div class="divMenu">
           <CDropdown variant="nav-item">
             <CDropdownToggle color="secondary">
-              <i class="bi bi-three-dots-vertical iconMenu" :style="{ color: theme.primaryColor }"></i>
+              <i
+                class="bi bi-three-dots-vertical iconMenu"
+                :style="{ color: theme.primaryColor }"
+              ></i>
             </CDropdownToggle>
             <CDropdownMenu>
               <CDropdownItem>
@@ -261,6 +264,7 @@ function isRouteActive(path) {
   height: 50px;
   transition: transform 0.3s ease-in-out;
 }
+
 .iconThema:hover {
   width: 50px;
   height: 50px;
@@ -273,10 +277,11 @@ function isRouteActive(path) {
   font-size: 35px;
   cursor: pointer;
 }
-.iconMenu{
+.iconMenu {
   margin-top: 4px;
   font-size: 35px;
 }
+
 .iconSetting:hover {
   transform: rotate(45deg);
 }
@@ -414,6 +419,9 @@ function isRouteActive(path) {
     justify-content: space-between;
   }
 
+  .theme {
+    margin-bottom: 5px;
+  }
   .perfilApp {
     width: 20px;
     height: 20px;
@@ -536,7 +544,7 @@ function isRouteActive(path) {
     margin-right: 10px;
   }
 
-  .theme i{
+  .theme i {
     margin-top: 1px;
   }
   .menu {

@@ -72,13 +72,13 @@ export default createStore({
         };
       } else if (themeName === 'Roxo') {
         theme = {
-          primaryColor: '#d400ff',
+          primaryColor: '#9370DB',
           secondaryColor: '#000000',
           thirdColor: '#ffffff',
-          gradientTop: 'linear-gradient(to top, #d400ff, rgba(0, 0, 0, 0)) 1',
-          gradientBottom: 'linear-gradient(to bottom, #d400ff, rgba(0, 0, 0, 0)) 1',
-          gradientLeft: 'linear-gradient(to left, #d400ff, rgba(0, 0, 0, 0)) 1',
-          gradientRight: 'linear-gradient(to right, #d400ff, #000000) 1',
+          gradientTop: 'linear-gradient(to top, #9370DB, rgba(0, 0, 0, 0)) 1',
+          gradientBottom: 'linear-gradient(to bottom, #9370DB, rgba(0, 0, 0, 0)) 1',
+          gradientLeft: 'linear-gradient(to left, #9370DB, rgba(0, 0, 0, 0)) 1',
+          gradientRight: 'linear-gradient(to right, #9370DB, #000000) 1',
         };
       }
 
